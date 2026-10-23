@@ -1,0 +1,1 @@
+Aggiornamento RITMO: telefoni ricreati come asset WebP con trasparenza reale, inseriti sul fondo avorio HTML della sezione. Rimossi riquadro fotografico e stacco di colore. Conservati pannello del titolare, prenotazioni, ricerca e struttura della pagina. Verificati caricamento e composizione nel browser e build Vite riuscita.

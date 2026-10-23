@@ -1,0 +1,4 @@
+.site-navbar { position: sticky; inset: 0 0 auto; z-index: 90; height: var(--site-header-height); background: rgb(var(--background-rgb) / .94); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.site-navbar__inner { display: flex; align-items: center; width: 100%; max-width: 1280px; height: 100%; margin-inline: auto; padding: 0 20px; padding-right: calc(var(--site-menu-size) + 40px); }
+@media (min-width: 640px) { .site-navbar__inner { padding-left: 24px; } }
+@media (min-width: 1024px) { .site-navbar__inner { padding-left: 32px; padding-right: calc(var(--site-menu-size) + 48px); } }

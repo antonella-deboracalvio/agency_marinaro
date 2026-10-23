@@ -1,0 +1,30 @@
+{
+  "mode": "Built-in image_gen",
+  "purpose": "Fictional demo portraits for the Marinaro Digital Studio team page, to be replaced with the real founders’ photographs.",
+  "transparent_background": true,
+  "date": "2026-09-30",
+  "images": [
+    {
+      "prompt": "Create a single premium editorial team portrait cutout for a modern independent web design studio. A fictional adult man in his early 30s with short softly wavy dark hair, subtle stubble, expressive natural face, wearing a plain charcoal crewneck t-shirt, waist-up frontal three-quarter portrait, relaxed shoulders, slight off-center head tilt and a warm spontaneous smile, quietly playful and approachable not a corporate stock pose. Both shoulders fully inside the image, enough chest visible; centered subject fills frame. Beautiful natural soft studio photography, authentic skin texture, refined neutral color grading, crisp silhouette and hair edges. Completely transparent background with real alpha; no shadows outside the person, no background scenery, no objects, no logos, no text, no frame, no graphic shapes. This is an explicitly illustrative demo portrait, not a depiction of an actual company founder. Square 1024 image; leave small transparent margin around top and shoulders.",
+      "files": [
+        "src/assets/team/founder-web.webp",
+        "src/assets/team/founder-web-small.webp",
+        "src/assets/team/founder-web-avatar.webp"
+      ],
+      "processing": "WebP encoding and responsive resizing; transparency preserved."
+    },
+    {
+      "prompt": "Create a single premium editorial team portrait cutout for a modern independent web design studio. A fictional adult woman in her early 30s with shoulder-length softly wavy dark brown hair, expressive natural face, wearing a plain off-white t-shirt, waist-up frontal three-quarter portrait, relaxed shoulders, looking into camera with an easy spontaneous smile and a slight playful head tilt. Both shoulders fully inside the image, enough chest visible; centered subject fills frame. Beautiful natural soft studio photography, authentic skin texture, refined neutral color grading, crisp silhouette and hair edges. Completely transparent background with real alpha; no shadows outside the person, no background scenery, no objects, no logos, no text, no frame, no graphic shapes. This is an explicitly illustrative demo portrait, not a depiction of an actual company founder. Square 1024 image; leave small transparent margin around top and shoulders.",
+      "files": [
+        "src/assets/team/founder-design.webp",
+        "src/assets/team/founder-design-small.webp",
+        "src/assets/team/founder-design-avatar.webp"
+      ],
+      "processing": "WebP encoding and responsive resizing; transparency preserved."
+    }
+  ],
+  "social_avatar": {
+    "source": "Existing donnaSocial.jpg illustration",
+    "file": "src/assets/team/social-avatar.webp"
+  }
+}

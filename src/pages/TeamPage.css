@@ -1,0 +1,40 @@
+.team-page { color: var(--foreground); background: var(--background); }
+.team-page :is(h1, h2, h3) { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; }
+.team-page__wrap { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+.team-intro { padding-top: 34px; padding-bottom: 72px; }
+.team-back { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: var(--muted-foreground); font-size: 13px; transition: color .2s; }
+.team-back:hover { color: var(--foreground); }
+.team-intro__heading { margin: 46px auto 58px; text-align: center; }
+.team-intro__heading h1 { margin: 0; font-family: var(--font-display); font-size: clamp(76px, 10vw, 140px); font-weight: 900; line-height: .9; letter-spacing: -.045em; text-transform: uppercase; }
+.team-intro__heading h1 span { color: inherit; }
+.team-intro__heading > p { margin: 24px auto 0; color: var(--muted-foreground); font-size: clamp(15px, 1.4vw, 17px); line-height: 1.65; text-wrap: balance; }
+.founders-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 7vw, 92px); max-width: 970px; margin-inline: auto; }
+.founder-card { min-width: 0; scroll-margin-top: 108px; }
+.founder-card__portrait { position: relative; isolation: isolate; aspect-ratio: 1 / 1; overflow: hidden; }
+.founder-card__shape { position: absolute; inset: 6% 0 0; z-index: -1; }
+.founder-card--double .founder-card__shape::before,
+.founder-card--double .founder-card__shape::after { content: ""; position: absolute; inset: 0 0 48%; border-radius: 72px; background: #a88af9; }
+.founder-card--double .founder-card__shape::after { inset: 48% 0 0; }
+.founder-card--arch .founder-card__shape { border-radius: 240px 240px 30px 30px; background: #75cfdc; }
+.founder-card__portrait img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; transform-origin: center bottom; transition: transform .4s cubic-bezier(.2,.65,.3,1); }
+.founder-card__text { padding: 25px 0 0; }
+.founder-card__role { margin: 0 0 11px; color: #c5b3f7; font-size: 12px; font-weight: 500; letter-spacing: .025em; }
+.founder-card--arch .founder-card__role { color: #8fd8e2; }
+.founder-card__text h2 { margin: 0; font-family: var(--font-display); font-size: clamp(32px, 3.1vw, 42px); line-height: .98; font-weight: 900; letter-spacing: -.025em; text-transform: uppercase; text-wrap: balance; }
+.founder-card__description { margin: 13px 0 0; max-width: 370px; font-size: 15px; line-height: 1.7; color: var(--muted-foreground); }
+.team-portrait-note { margin: 24px 0 0; text-align: center; color: var(--muted-foreground); font-size: 11px; }
+@media (hover:hover) and (pointer:fine) { .founder-card:hover img { transform: translateY(-4px) scale(1.025); } }
+@media (max-width: 640px) {
+  .team-page__wrap { width: calc(100% - 48px); }
+  .team-intro { padding-top: 16px; padding-bottom: 42px; }
+  .team-intro__heading { margin: 28px auto 38px; }
+  .team-intro__heading h1 { font-size: clamp(48px, 17vw, 88px); }
+  .team-intro__heading > p { font-size: 14px; margin-top: 20px; }
+  .team-desktop-break { display: none; }
+  .founders-grid { grid-template-columns: 1fr; gap: 36px; max-width: 420px; }
+  .founder-card__text { padding-top: 22px; }
+  .founder-card__text h2 { font-size: clamp(30px, 8.8vw, 40px); }
+  .founder-card__description { font-size: 14px; }
+}
+@media (max-width: 359px) { .team-page__wrap { width: calc(100% - 40px); } }
+@media (prefers-reduced-motion: reduce) { .team-page *, .team-page *::before, .team-page *::after { transition: none; animation: none; } }

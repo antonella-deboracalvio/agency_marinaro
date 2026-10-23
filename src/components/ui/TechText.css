@@ -1,0 +1,21 @@
+.tech-text { position: relative; display: block; min-width: 0; color: inherit; line-height: 1; }
+.tech-text__accessible { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.tech-text__fallback { display: block; padding-block: 20px; white-space: nowrap; }
+.tech-text__svg { display: block; width: 100%; height: auto; overflow: visible; user-select: none; }
+.tech-text__glyph text { font-family: inherit; font-weight: inherit; letter-spacing: 0; }
+.tech-text__fill { fill: currentColor; transition: opacity 180ms ease; }
+.tech-text__outline { fill: none; stroke: currentColor; stroke-width: 1.25px; stroke-dasharray: 3.5 2.5; stroke-linejoin: round; opacity: 0; transition: opacity 180ms ease; }
+.tech-text__glyph[data-active="true"] .tech-text__fill { opacity: 0; }
+.tech-text__glyph[data-active="true"] .tech-text__outline { opacity: 1; }
+.tech-text__selection { pointer-events: none; transition: transform 260ms cubic-bezier(.22, 1, .36, 1); }
+.tech-text__frame { fill: none; stroke: currentColor; stroke-opacity: .55; stroke-width: .75px; }
+.tech-text__handle { fill: currentColor; }
+.tech-text__label { fill: currentColor; opacity: .72; font: 9px ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .15px; text-transform: none; }
+.tech-text__speck { fill: currentColor; opacity: .6; animation: tech-text-speck 1.7s ease-in-out infinite alternate; }
+.tech-text__speck--second { animation-delay: -.8s; }
+@keyframes tech-text-speck { to { opacity: .12; } }
+@media (prefers-reduced-motion: reduce) {
+  .tech-text__fill, .tech-text__outline, .tech-text__selection { transition: none; }
+  .tech-text__selection, .tech-text__outline { display: none; }
+  .tech-text__glyph[data-active="true"] .tech-text__fill { opacity: 1; }
+}

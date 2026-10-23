@@ -1,0 +1,25 @@
+.services-section { display: flex; align-items: center; min-height: calc(85svh - var(--site-header-height)); background: var(--background); color: var(--foreground); scroll-margin-top: var(--site-header-height); }
+.services-section .services-section__inner { width: 100%; max-width: 1400px; margin-inline: auto; padding: clamp(56px, 6vw, 88px) clamp(24px, 4vw, 56px); }
+.services-composition { --editorial-title-size: clamp(76px, 8vw, 112px); --editorial-title-size-mobile: clamp(62px, 21vw, 100px); display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.65fr); align-items: center; gap: clamp(36px, 5vw, 70px); min-width: 0; }
+.services-composition .services-display-title { max-width: 100%; text-align: left; justify-self: start; }
+.services-areas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 30px; min-width: 0; }
+.services-branched-menu { padding-left: 18px; }
+.services-branched-menu .branched-menu__head { font-family: var(--font-display); font-size: clamp(28px, 2.8vw, 38px); font-weight: 900; line-height: 1; letter-spacing: -.015em; text-transform: uppercase; }
+.services-branched-menu .branched-menu__fold-button { flex-basis: 32px; }
+.services-branched-menu .branched-menu__item { font-size: 15px; }
+.services-branched-menu .branched-menu__page-arrow { font-size: 17px; margin-left: 9px; }
+@media (max-width: 1100px) {
+  .services-composition { grid-template-columns: 1fr; gap: 42px; }
+  .services-composition .services-display-title { text-align: center; justify-self: center; }
+  .services-areas { width: 100%; max-width: 780px; margin-inline: auto; gap: 36px 40px; }
+  .services-branched-menu .branched-menu__head { font-size: 36px; }
+}
+@media (max-width: 600px) {
+  .services-section { min-height: 0; }
+  .services-section .services-section__inner { padding: 48px 24px 56px; }
+  .services-composition { gap: 38px; }
+  .services-areas { grid-template-columns: 1fr; max-width: 390px; gap: 30px; }
+  .services-branched-menu { padding-left: 20px; }
+  .services-branched-menu .branched-menu__head { font-size: 32px; }
+  .services-branched-menu .branched-menu__fold-button { flex-basis: 44px; }
+}

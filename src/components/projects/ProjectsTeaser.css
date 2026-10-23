@@ -1,0 +1,40 @@
+.projects-teaser{padding:clamp(82px,8vw,126px) 24px;background:var(--background);color:var(--foreground)}
+.projects-teaser__header,.projects-teaser__list{width:min(100%,1540px);margin-inline:auto}
+.projects-teaser__header{--editorial-title-size-mobile:min(30vw,160px)}
+.projects-teaser__header{display:flex;flex-direction:column;align-items:center;padding-bottom:clamp(48px,5vw,72px);text-align:center}
+.projects-teaser__header>p{position:relative;z-index:1;margin:clamp(-8px,-.5vw,-2px) 0 16px;color:var(--foreground);font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.25rem,2.2vw,2.15rem);font-style:italic;font-weight:400;line-height:1;letter-spacing:-.04em}
+.projects-teaser__header-link{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 16px;border:1px solid rgb(var(--primary-rgb) / .3);border-radius:999px;background:var(--secondary);color:var(--foreground);font-family:"Arial Narrow",Arial,sans-serif;font-size:.72rem;font-weight:900;letter-spacing:-.01em;text-decoration:none;text-transform:uppercase;transition:background .25s ease,color .25s ease}
+.projects-teaser__header h2+.projects-teaser__header-link{margin-top:24px}
+.projects-teaser__header-link:hover{background:var(--primary);color:var(--background)}.projects-teaser__header-link svg{width:14px;height:14px}
+.projects-teaser__list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(52px,6vw,92px) clamp(22px,2.2vw,36px)}
+.projects-teaser__project{display:block;min-width:0;color:var(--foreground);text-decoration:none}
+.projects-teaser__media{width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:15px;background:var(--muted)}
+.projects-teaser__media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .65s cubic-bezier(.16,1,.3,1)}
+a.projects-teaser__project:hover .projects-teaser__media img{transform:scale(1.025)!important}
+.projects-teaser__project-copy{position:relative;display:block;padding-top:13px;pointer-events:none}
+.projects-teaser__project-copy h3{margin:0 0 5px;color:var(--silver);font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.05rem,1.35vw,1.45rem);font-style:italic;font-weight:400;line-height:1;letter-spacing:-.035em}
+.projects-teaser__project-copy p,.projects-teaser__project-copy svg{display:none}
+.projects-teaser__project-copy strong{display:block;max-width:100%;margin:0;color:var(--foreground);font-family:Impact,Haettenschweiler,"Arial Narrow Bold","Arial Narrow",sans-serif;font-size:clamp(2rem,3.15vw,3.8rem);font-stretch:condensed;font-weight:900;line-height:.88;letter-spacing:-.025em;text-transform:uppercase}
+@media(max-width:767px){.projects-teaser{padding:58px 12px 86px}.projects-teaser__header{padding-bottom:34px}.projects-teaser__header h2+.projects-teaser__header-link{margin-top:20px}.projects-teaser__header-link{min-height:34px;padding-inline:14px;font-size:.66rem}.projects-teaser__list{grid-template-columns:1fr;gap:34px}.projects-teaser__media{aspect-ratio:4/3;border-radius:12px}.projects-teaser__project-copy{padding:11px 1px 0}.projects-teaser__project-copy h3{margin-bottom:5px;font-size:1.05rem}.projects-teaser__project-copy strong{font-size:clamp(1.65rem,7.8vw,2.35rem);line-height:.9;letter-spacing:-.018em}}
+@media(prefers-reduced-motion:reduce){.projects-teaser__media img{transition:none}}
+
+/* Equal desktop pairs, including a consistent space for the captions. */
+@media (min-width: 768px) {
+  .projects-teaser__list { width: min(100%, 1380px, calc((100svh - 240px) * 2.8)); gap: 56px 28px; }
+  .projects-teaser__project { display: grid; grid-template-rows: auto 100px; align-content: start; scroll-margin-top: 100px; }
+  .projects-teaser__media { aspect-ratio: 7 / 5; }
+  .projects-teaser__project-copy strong { font-size: clamp(1.6rem, 2.65vw, 3rem); line-height: .98; text-wrap: balance; }
+  .projects-teaser__project-copy h3 { font-size: clamp(1rem, 1.25vw, 1.3rem); margin-bottom: 8px; }
+}
+
+/* Show the supplied project artwork in full, including mobile headlines. */
+.projects-teaser__media { aspect-ratio: auto; height: auto; background: transparent; align-self: start; }
+.projects-teaser__media img { height: auto; object-fit: contain; object-position: center; }
+a.projects-teaser__project:hover .projects-teaser__media img { transform: none !important; }
+.projects-teaser__project { align-self: start; grid-template-rows: auto auto; }
+.projects-teaser__project:focus-visible { outline: 2px solid #bba6d8; outline-offset: 6px; border-radius: 12px; }
+
+/* One shared frame for all four projects, matching Forma Pilates. */
+.projects-teaser .projects-teaser__media { position: relative; aspect-ratio: 1586 / 992; height: auto; display: grid; place-items: center; background: #171719; }
+.projects-teaser .projects-teaser__media img { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; object-fit: contain; object-position: center; }
+.projects-teaser .projects-teaser__project { grid-template-rows: auto auto; align-self: start; }

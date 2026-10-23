@@ -1,0 +1,20 @@
+.editorial-title {
+  margin: 0;
+  color: var(--foreground);
+  font-family: var(--font-display);
+  font-size: var(--editorial-title-size, clamp(6.5rem, 17vw, 17rem));
+  font-stretch: condensed;
+  font-weight: 900;
+  line-height: .72;
+  letter-spacing: -.045em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .editorial-title {
+    font-size: var(--editorial-title-size-mobile, clamp(7rem, 35vw, 10rem));
+    line-height: .73;
+    letter-spacing: -.055em;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/team", "destination": "/index.html" },
+    { "source": "/progetti", "destination": "/index.html" },
+    { "source": "/contatti", "destination": "/index.html" },
+    { "source": "/servizi/digital", "destination": "/index.html" },
+    { "source": "/servizi/identity", "destination": "/index.html" },
+    { "source": "/servizi/content", "destination": "/index.html" },
+    { "source": "/servizi/campaigns", "destination": "/index.html" }
+  ]
+}

@@ -1,0 +1,53 @@
+.liquid-menu { --menu-right: 16px; position: fixed; z-index: 100; inset: 0 0 auto; height: 0; pointer-events: none; }
+.liquid-menu__trigger, .liquid-menu__close { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 8px 21px; border: 0; border-radius: 100px; font-family: var(--font-display); font-size: 22px; font-weight: 900; line-height: 1; text-transform: uppercase; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.liquid-menu__trigger { --trigger-size: 48px; position: fixed; top: calc((var(--site-header-height) - var(--trigger-size)) / 2); right: var(--menu-right); width: var(--trigger-size); height: var(--trigger-size); min-height: var(--trigger-size); padding: 0; border-radius: 50%; background: var(--foreground); color: var(--background); box-shadow: inset 0 1px 0 #fff, 0 0 0 1px #ffffff1a; pointer-events: auto; }
+.liquid-menu__icon { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 5px; width: 22px; height: 22px; }
+.liquid-menu__icon > span { display: block; flex: 0 0 2px; width: 100%; height: 2px; border-radius: 2px; background: currentColor; transition: width .25s cubic-bezier(.22, 1, .36, 1); }
+.liquid-menu__icon > span:nth-child(2) { width: 16px; }
+.liquid-menu__icon > span:nth-child(3) { width: 10px; }
+.liquid-menu__trigger:focus-visible .liquid-menu__icon > span { width: 100%; }
+.liquid-menu[data-open="true"] > .liquid-menu__trigger { visibility: hidden; }
+.liquid-menu__backdrop { position: fixed; inset: 0; background: #03030665; touch-action: none; }
+.liquid-menu__panel { position: fixed; inset: 12px 12px auto auto; display: flex; flex-direction: column; width: min(470px, calc(100vw - 24px)); height: calc(100svh - 24px); height: calc(100dvh - 24px); max-height: 920px; overflow: hidden; border-radius: 25px; background: #060607; color: #f5f3f0; transform-origin: top right; box-shadow: 0 16px 80px #0005; }
+.liquid-menu__top { display: flex; justify-content: flex-end; flex: 0 0 auto; padding: 18px 20px 4px; }
+.liquid-menu__close { background: #c1a4f1; color: #08080b; }
+.liquid-menu__close > span { font-family: Arial, sans-serif; font-size: 23px; font-weight: 400; }
+.liquid-menu__scroll { display: flex; flex: 1; flex-direction: column; min-height: 0; padding: 18px 32px 24px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #695781 transparent; }
+.liquid-menu__navigation { display: flex; flex: 1 0 auto; flex-direction: column; gap: 28px; }
+.liquid-menu__links { display: grid; gap: 5px; padding-block: 8px; }
+.liquid-menu__links a { display: flex; align-items: center; min-height: clamp(54px, 8svh, 72px); padding-block: 5px; color: #f5f3f0; font-family: var(--font-display); font-size: clamp(40px, 5.8svh, 54px); font-weight: 900; line-height: 1.02; letter-spacing: -.02em; text-transform: uppercase; transition: color .2s ease; }
+.liquid-menu__links a[aria-current] { color: #c1a4f1; }
+.liquid-menu__footer { margin-top: auto; }
+.liquid-menu__contact { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 62px; padding: 15px 23px; border-radius: 100px; color: #101014; background: #f1eff4; font-family: var(--font-display); font-size: 32px; font-weight: 900; line-height: 1; text-transform: uppercase; transition: background .2s ease; }
+.liquid-menu__contact > span { font: 27px Arial, sans-serif; }
+.liquid-menu__home { display: flex; align-items: center; justify-content: center; width: fit-content; min-height: 44px; margin: 8px auto 0; padding-inline: 12px; color: #aaa6b2; font: 13px/1.4 Inter, ui-sans-serif, system-ui, sans-serif; }
+.liquid-menu :is(a, button):focus-visible { outline: 2px solid #d4b6ff; outline-offset: 4px; }
+@media (min-width: 1024px) {
+  .liquid-menu { --menu-right: max(32px, calc((100vw - 1280px) / 2 + 32px)); }
+  .liquid-menu__trigger { --trigger-size: 56px; }
+  .liquid-menu__icon { transform: scale(1.09); }
+  .liquid-menu__panel { width: clamp(420px, 32vw, 540px); border-radius: 28px; }
+  .liquid-menu__scroll { padding-inline: 36px; }
+}
+@media (max-width: 767px) {
+  .liquid-menu__panel { inset: 8px 8px auto auto; width: calc(100vw - 16px); height: calc(100svh - 16px); height: calc(100dvh - 16px); border-radius: 22px; }
+  .liquid-menu__top { padding: 12px 15px 0; }
+  .liquid-menu__scroll { padding: 16px 24px max(16px, env(safe-area-inset-bottom)); }
+  .liquid-menu__links a { min-height: clamp(48px, 7.8svh, 62px); font-size: clamp(30px, min(10vw, 6.2svh), 42px); }
+  .liquid-menu__contact { min-height: 58px; padding: 14px 21px; font-size: 29px; }
+  .liquid-menu__contact > span { font-size: 25px; }
+  .liquid-menu__home { margin-top: 6px; }
+}
+@media (max-height: 600px) {
+  .liquid-menu__navigation { gap: 16px; }
+  .liquid-menu__links { gap: 0; padding-block: 0; }
+  .liquid-menu__links a { min-height: 44px; font-size: 30px; }
+  .liquid-menu__contact { min-height: 50px; font-size: 26px; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .liquid-menu__trigger:hover, .liquid-menu__close:hover { background: #d2baf6; }
+  .liquid-menu__trigger:hover .liquid-menu__icon > span { width: 100%; }
+  .liquid-menu__links a:hover, .liquid-menu__home:hover { color: #d3b5f5; }
+  .liquid-menu__contact:hover { background: #d2baf6; }
+}
+@media (prefers-reduced-motion: reduce) { .liquid-menu *, .liquid-menu *::before, .liquid-menu *::after { transition: none; animation: none; } }

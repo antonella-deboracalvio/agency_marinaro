@@ -1,0 +1,35 @@
+.form-aurora {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 10% -10%, #77bd8173, transparent 58%),
+    radial-gradient(ellipse at 52% -24%, #bcb5d16b, transparent 54%),
+    radial-gradient(ellipse at 93% -5%, #6241df8c, transparent 62%);
+}
+.form-aurora[data-ready] { background: none; }
+.form-aurora canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: blur(22px);
+  transform: scale(1.09);
+  transform-origin: center top;
+  opacity: .94;
+}
+@media (max-width: 640px) {
+  .form-aurora {
+    opacity: 1;
+    background:
+      radial-gradient(ellipse at 0% 36%, #6330bd6b, transparent 57%),
+      radial-gradient(ellipse at 100% 65%, #278ead52, transparent 51%),
+      radial-gradient(ellipse at 30% 95%, #9466d94a, transparent 54%);
+  }
+  .form-aurora canvas {
+    filter: blur(3px);
+    opacity: .95;
+    transform: scale(1.06);
+  }
+}

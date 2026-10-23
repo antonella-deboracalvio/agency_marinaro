@@ -1,0 +1,42 @@
+/* Pantheon Cyberpunk Noir — colors sampled from the supplied reference. */
+:root {
+  --font-display: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
+  --site-header-height: 84px;
+  --site-menu-size: 56px;
+  color-scheme: dark;
+  --background: #050508;
+  --background-rgb: 5 5 8;
+  --card: #0d0d12;
+  --card-rgb: 13 13 18;
+  --foreground: #f4f4f5;
+  --foreground-rgb: 244 244 245;
+  --primary: #a855f7;
+  --primary-rgb: 168 85 247;
+  --primary-hover: #b975ff;
+  --primary-hover-rgb: 185 117 255;
+  --secondary: #1e1b4b;
+  --secondary-rgb: 30 27 75;
+  --accent: #06b6d4;
+  --accent-rgb: 6 182 212;
+  --muted: #18181b;
+  --muted-rgb: 24 24 27;
+  --muted-foreground: #a1a1aa;
+  --muted-foreground-rgb: 161 161 170;
+  --silver: #d4d4d8;
+  --silver-rgb: 212 212 216;
+  --border: #27272a;
+  --border-rgb: 39 39 42;
+  --border-strong: #52525b;
+  --border-strong-rgb: 82 82 91;
+  --destructive: #ef4444;
+  --destructive-rgb: 239 68 68;
+}
+
+@media (min-width: 1024px) {
+  :root { --site-header-height: 96px; --site-menu-size: 64px; }
+}
+
+.gradient-menu__highlight {
+  background: linear-gradient(110deg, var(--secondary), rgb(var(--primary-rgb) / .46) 68%, rgb(var(--accent-rgb) / .22));
+  box-shadow: inset 0 1px rgb(var(--foreground-rgb) / .12), 0 8px 24px rgb(var(--primary-rgb) / .14);
+}

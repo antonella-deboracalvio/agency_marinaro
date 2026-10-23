@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: var(--foreground);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background);
+}
+
+main > section {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--background);
+  background: var(--primary);
+}
+
+.logo-marquee {
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.logo-marquee-reverse {
+  animation: marqueeReverse 32s linear infinite;
+  will-change: transform;
+}
+
+.mobile-service-scroll {
+  touch-action: pan-y;
+  overscroll-behavior: auto;
+  overflow: visible;
+}
+
+.mobile-service-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 4px;
+}
+
+.mobile-service-card {
+  position: sticky;
+  height: 390px;
+  min-height: 390px;
+  margin-bottom: 22px;
+  filter: none !important;
+  pointer-events: auto;
+  touch-action: pan-y;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+.mobile-service-card:last-child {
+  margin-bottom: 4px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqueeReverse {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes logoPulse {
+  from {
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5), 0 0 20px rgba(168,85,247, 0.1);
+  }
+  to {
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5), 0 0 50px rgba(168,85,247, 0.25);
+  }
+}
+
+.logo-pulse {
+  animation: logoPulse 2.5s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .logo-marquee,
+  .logo-marquee-reverse {
+    animation-duration: 80s;
+  }
+
+  .logo-pulse {
+    animation: none;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168,85,247, 0.15);
+  }
+}

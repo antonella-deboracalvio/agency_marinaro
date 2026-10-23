@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.edge-headless*
+*.log
+.DS_Store
+dev-screenshots/
+.env
+.env.*
+!.env.example
+.qa/
