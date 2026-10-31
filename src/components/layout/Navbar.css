@@ -2,3 +2,8 @@
 .site-navbar__inner { display: flex; align-items: center; width: 100%; max-width: 1280px; height: 100%; margin-inline: auto; padding: 0 20px; padding-right: calc(var(--site-menu-size) + 40px); }
 @media (min-width: 640px) { .site-navbar__inner { padding-left: 24px; } }
 @media (min-width: 1024px) { .site-navbar__inner { padding-left: 32px; padding-right: calc(var(--site-menu-size) + 48px); } }
+
+/* Reserve room for the language control as well as the menu trigger. */
+.site-navbar__inner{padding-right:calc(var(--site-menu-size) + 127px)}
+@media(max-width:600px){.site-navbar__inner{padding-right:150px}}
+@media(max-width:374px){.brand-mark{gap:7px}.brand-mark__name{font-size:17px}.brand-mark__symbol{width:28px;height:32px}.brand-mark__descriptor{font-size:6.5px;letter-spacing:.17em}.liquid-menu__language-trigger{gap:5px;padding-inline:8px;right:calc(var(--menu-right) + 55px)}.liquid-menu__language-trigger .language-flag{width:20px;height:14px}}

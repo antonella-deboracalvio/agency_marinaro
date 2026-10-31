@@ -1,5 +1,3 @@
-import trama from "../assets/work/trama-1600.webp";
-import tramaSmall from "../assets/work/trama-720.webp";
 import malga from "../assets/work/malga-1600.webp";
 import forma from "../assets/work/forma-1600.webp";
 import infinity from "../assets/work/infinity-1600.webp";
@@ -27,7 +25,6 @@ export const projects = [
   { id: "qr-menu-restaurant", title: "PAUSA · Menu QR", result: "Il menu, sempre aggiornato.", category: "QR Menu", sector: "Hospitality", status: "Concept", year: "2026", description: "Un menu QR da consultare sul telefono, con aggiornamenti in autonomia tramite pannello riservato oppure con il supporto della nostra assistenza.", services: ["UX mobile", "UI design", "QR system"], cover: qrMenu, coverSmall: qrMenu, homeFeatured: true, liveUrl: "", previewUrl: "", canEmbed: false },
   { id: "scorta", title: "SCORTA", result: "Il magazzino, a colpo d’occhio.", category: "Gestionale", sector: "Operations", status: "Concept", year: "2026", description: "Concept di gestionale per consultare le giacenze, seguire i movimenti e individuare gli articoli da riordinare.", services: ["Product design", "Dashboard", "Design system"], cover: dashboard, coverSmall: scortaSmall, liveUrl: "", previewUrl: "", canEmbed: false },
   { id: "sfoglia", title: "SFOGLIA", result: "Il mattino ha gusto.", category: "Sito web", sector: "Food", status: "Concept", year: "2026", description: "Un concept per una caffetteria contemporanea: colazione, caffè e un menu semplice da esplorare.", services: ["Landing page", "Copy direction", "Responsive"], cover: food, coverSmall: sfogliaSmall, detailPath: "/progetti/sfoglia", liveUrl: "", previewUrl: "", canEmbed: false },
-  { id: "trama", title: "TRAMA", result: "Un’identità da toccare.", category: "Brand identity", sector: "Design tessile", status: "Concept", year: "2026", description: "Un’identità originale per uno studio tessile: tipografia, carta e cotone, in un sistema visivo essenziale.", services: ["Visual identity", "Art direction", "Applicazioni"], cover: trama, coverSmall: tramaSmall },
 ];
 
 

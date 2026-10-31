@@ -1,5 +1,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import "./CurvedLoop.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 const CurvedLoop = ({
   marqueeText = "",
@@ -10,6 +12,8 @@ const CurvedLoop = ({
   direction = "left",
   interactive = true,
 }) => {
+  const {t:tr}=useTranslation();
+
   const text = useMemo(() => {
     const hasTrailing = /\s|\u00A0$/.test(marqueeText);
     return (hasTrailing ? marqueeText.replace(/\s+$/, "") : marqueeText) + "\u00A0";
@@ -115,7 +119,7 @@ const CurvedLoop = ({
     >
       <svg className="curved-loop-svg" viewBox="0 0 1440 120" aria-hidden="true">
         <text ref={measureRef} xmlSpace="preserve" style={{ visibility: "hidden", opacity: 0, pointerEvents: "none" }}>
-          {text}
+          {tr(text)}
         </text>
         <defs>
           <path ref={pathRef} id={pathId} d={pathD} fill="none" stroke="transparent" />
@@ -123,7 +127,7 @@ const CurvedLoop = ({
         {ready && (
           <text fontWeight="bold" xmlSpace="preserve" className={className}>
             <textPath ref={textPathRef} href={`#${pathId}`} startOffset={offset + "px"} xmlSpace="preserve">
-              {totalText}
+              {tr(totalText)}
             </textPath>
           </text>
         )}

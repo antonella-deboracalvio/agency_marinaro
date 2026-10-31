@@ -1,0 +1,35 @@
+{
+  "mode": "Built-in image_gen; four independent reference-based product recreations.",
+  "common": "Use case: product-mockup. Asset type: sharp premium ecommerce catalogue photograph for FUORI STANDARD streetwear website. Match the supplied reference garment faithfully in style and proportions, but recreate it with real-looking textile detail at high resolution. Single garment only, full front view, centered on a minimal black hanger, identical plain light warm grey seamless background, soft diffused studio lighting, natural shadows and restrained contrast. Portrait 4:5 framing, garment fully visible including hems with consistent 8 percent breathing room. No model, no hands, no scenery, no border, no UI, no prices, no watermarks. Real fashion catalogue photography, not a 3D render, no synthetic shiny fabric, no exaggerated distressed texture. Native image at least 1024px wide.",
+  "assets": [
+    {
+      "file": "src/assets/work/fuori-tee-hd.webp",
+      "prompt": "Boxy oversized washed charcoal-black cotton crewneck T-shirt with dropped shoulders and natural stitching. Tiny clean red FS initials embroidered at left chest; retain restrained washed black tone.",
+      "workspace_path": "/workspace/scratch/ea06439d60de/work/Marinaro/src/assets/work/fuori-tee-hd.webp"
+    },
+    {
+      "file": "src/assets/work/fuori-hoodie-hd.webp",
+      "prompt": "Oversized faded charcoal cotton pullover hoodie with thick hood, kangaroo pocket, ribbed cuffs and hem. Small crisp red typography centered on chest reads exactly FUORI on first line STANDARD on second. Real soft heavyweight cotton, very subtle washed patina.",
+      "workspace_path": "/workspace/scratch/ea06439d60de/work/Marinaro/src/assets/work/fuori-hoodie-hd.webp"
+    },
+    {
+      "file": "src/assets/work/fuori-denim-hd.webp",
+      "prompt": "Loose straight-leg light washed blue jeans hanging from a black clip hanger, full length waist to hems, believable vintage denim grain, seams, zipper fly, five pockets and natural folds. No branding text.",
+      "workspace_path": "/workspace/scratch/ea06439d60de/work/Marinaro/src/assets/work/fuori-denim-hd.webp"
+    },
+    {
+      "file": "src/assets/work/fuori-overshirt-hd.webp",
+      "prompt": "Black heavyweight cotton overshirt jacket with pointed collar, button front, two minimal chest pockets, straight hem and gently folded sleeves hanging naturally. Real matte twill textile, subtle stitching. No printed logo.",
+      "workspace_path": "/workspace/scratch/ea06439d60de/work/Marinaro/src/assets/work/fuori-overshirt-hd.webp"
+    }
+  ],
+  "reference_files": [
+    "src/assets/work/fuori-product-0.webp",
+    "src/assets/work/fuori-product-1.webp",
+    "src/assets/work/fuori-product-2.webp",
+    "src/assets/work/fuori-product-3.webp"
+  ],
+  "portrait": "Supplied portrait used without retouching; WebP exports at 1120, 480 and 200 pixels wide.",
+  "logo": "The supplied short-diagonal monogram is represented as clean native SVG geometry, shared by navbar, footer, favicon and startup loader.",
+  "startup": "Completion milestones, visible eager-image decoding, fonts readiness; 1200ms grace period after mount and failsafe for a missing bundle. Deferred images keep loading normally."
+}

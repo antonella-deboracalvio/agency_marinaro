@@ -219,3 +219,5 @@
 @media (prefers-reduced-motion: reduce) {
   .frosted-scene *, .frosted-scene *::before, .frosted-scene *::after { animation: none; transition: none; }
 }
+
+.form-privacy-notice{margin:18px 0;color:#c9c2d0;font-size:13px;line-height:1.65}.form-privacy-notice a{color:#e5d0fa;text-decoration:underline;text-underline-offset:3px}.frosted-panel fieldset:disabled{opacity:.6}.frosted-button:disabled{cursor:not-allowed}

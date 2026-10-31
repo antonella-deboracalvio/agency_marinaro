@@ -1,0 +1,5 @@
+attivita,finalita,dati,base_da_validare,destinatari_da_confermare,conservazione_da_decidere,sicurezza,responsabile_interno
+Contatti,Rispondere a richieste,Nome email messaggio servizi tempi; telefono/azienda facoltativi,Misure precontrattuali,Hosting Resend casella email,Da definire e applicare,HTTPS endpoint validati accesso casella MFA,Da assegnare
+Candidature,Valutare collaborazioni,Nome email profilo disponibilita; portfolio facoltativo,Misure precontrattuali,Hosting Resend casella email,Da definire e applicare,Accesso limitato; nessun CV allegato,Da assegnare
+Sicurezza tecnica,Prevenire abusi,Identificativi HMAC per IP/email in memoria; log hosting da verificare,Interesse legittimo da valutare,Hosting; contatori per istanza,Finestra contatori 10 minuti; pulizia alla richiesta successiva/riavvio; log hosting da definire,Chiave HMAC casuale; limiti; niente log del payload nel codice,Da assegnare
+Lingua,Ricordare scelta utente,Codice lingua sul dispositivo,Funzione tecnica,Nessun invio dedicato,Fino a cancellazione locale,localStorage con gestione errori,Da assegnare

@@ -41,3 +41,8 @@
 @media (prefers-reduced-motion: reduce) { .team-preview *, .team-preview *::after { transition: none; } }
 
 .studio-social{display:flex;align-items:center;justify-content:space-between;gap:30px;max-width:1120px;margin:0 auto;padding:55px 32px 45px;background:var(--background)}.studio-social__intro>p:first-child{font-size:10px;letter-spacing:.14em;color:var(--muted-foreground);margin-bottom:18px}.studio-social h2{font-size:clamp(36px,5vw,65px);line-height:.98;font-weight:650;letter-spacing:-.065em;margin:0}.studio-social h2 span{color:var(--silver)}.studio-social__intro>p:last-child{font-size:13px;line-height:1.7;color:var(--muted-foreground);max-width:300px;margin-top:20px}.studio-social .instagram-tile{flex:none}@media(max-width:767px){.studio-social{padding:35px 24px 30px;flex-direction:column;gap:8px;text-align:center}.studio-social__intro>p:last-child{margin:18px auto 0}.studio-social h2{font-size:43px}.studio-social__intro>p:first-child{font-size:9px}}
+
+@media(min-width:768px){.studio-social{gap:20px}.studio-social__intro{flex:1;min-width:0}.studio-social h2{font-size:clamp(36px,4.5vw,60px)}.studio-social .social-showcase{width:min(55%,570px)}}
+.team-avatar--sviluppo img,.team-avatar--design img{object-position:50% 28%}
+
+.team-avatar--social{background:#30283e;color:#ddc8f1;box-shadow:inset 0 0 0 1px #b89ad746}.team-avatar--social>svg{width:28px;height:28px}.team-avatar--design img{object-position:50% 30%}

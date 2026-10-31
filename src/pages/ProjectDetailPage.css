@@ -8,3 +8,5 @@
 .real-project-capture img{display:block;width:100%;height:auto}
 .real-project-capture:focus-visible{outline:3px solid var(--area-accent);outline-offset:-3px}
 .project-detail--malga-cavedine .detail-canvas,.project-detail--infinity-home .detail-canvas{background:#fff}
+
+.visual-transparency{color:#b9b1c1;font-size:12px;line-height:1.6;margin:16px 0}

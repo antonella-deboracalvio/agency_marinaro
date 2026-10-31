@@ -1,5 +1,5 @@
 {
-  "method": "Built-in OpenAI imagegen; 28 original fictional-brand illustrations, two targeted text corrections",
+  "method": "Original built-in image_gen artwork. Current FARINA selections are documented separately.",
   "references": "Six user-supplied screenshots: contemporary playful typography, flat colors and geometric identities; original artwork, no template assets copied.",
   "assets": [
     {
@@ -31,48 +31,6 @@
       "output": "public/images/services/pop-d-booking.webp"
     },
     {
-      "id": "pop-d-dashboard",
-      "sourceId": "d-dashboard",
-      "brand": "PIEGA",
-      "prompt": "Use case: ui-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Laptop at bakery office desk with clean inventory dashboard. Clear white screen, violet header 'piega', orderly cards 'Ordini', 'Prodotti', 'Scorte', a simple violet bar chart and minimal rows. Butter-yellow paper delivery slip and real flour-dusted bread edge, credible practical software, whole screen visible. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-d-dashboard.webp"
-    },
-    {
-      "id": "pop-d-inventory",
-      "sourceId": "d-inventory",
-      "brand": "PIEGA",
-      "prompt": "Use case: ui-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Landscape tablet on matte butter-yellow tabletop, showing refined stock management table with violet navigation, columns 'Prodotto', 'Scorte', 'Stato', short food rows, clean aligned data. One small violet branded box behind. Sharp full device, editorial product photo. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-d-inventory.webp"
-    },
-    {
-      "id": "pop-d-menu",
-      "sourceId": "d-menu",
-      "brand": "PIEGA",
-      "prompt": "Use case: ui-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: One large phone with beautiful digital bakery menu, giant lowercase piega at top, clear product photo of croissant, categories 'Colazione', 'Pane', 'Dolci', airy cream cards and violet accents. Placed on stainless cafe table, vivid violet paper napkin and crumb nearby. Screen readable, entire phone. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-d-menu.webp"
-    },
-    {
-      "id": "pop-d-qr",
-      "sourceId": "d-qr",
-      "brand": "PIEGA",
-      "prompt": "Use case: product-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Physical folded table tent in butter-yellow textured paper with huge violet piega, short 'Il menu, qui.' and a square illustrative QR graphic, beside a smartphone showing same bakery menu, on real stainless steel table. Eye-level three-quarter composition, no scan claim. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-d-qr.webp"
-    },
-    {
-      "id": "pop-i-logo",
-      "sourceId": "i-logo",
-      "brand": "PIEGA",
-      "prompt": "Use case: product-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Overhead close photographic brand study: two thick rectangular paper cards, one butter with huge violet 'piega', other violet with huge butter 'piega', original folded ribbon symbol as small signoff. Bold perfectly spaced rounded custom type, tactile debossing subtle. Clean off-white surface. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-i-logo.webp"
-    },
-    {
-      "id": "pop-i-sign",
-      "sourceId": "i-sign",
-      "brand": "PIEGA",
-      "prompt": "Use case: product-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Realistic street close-up of physical bakery projecting sign, butter panel and giant violet 'piega' rounded lowercase logo, simple folded-ribbon mark. Pale concrete facade, partial storefront glass and daylight reflections. Confident contemporary local retail, no classic brass or serif type. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-i-sign.webp"
-    },
-    {
       "id": "pop-i-palette",
       "sourceId": "i-palette",
       "brand": "MOSSA",
@@ -87,46 +45,11 @@
       "output": "public/images/services/pop-i-pattern.webp"
     },
     {
-      "id": "pop-i-packaging",
-      "sourceId": "i-packaging",
-      "brand": "PIEGA",
-      "prompt": "Use case: product-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Hero bakery packaging still life: one butter-yellow pastry box with giant cropped violet piega wrapping side, one violet takeaway coffee cup with butter wordmark and folded ribbon motif, one unwrapped real croissant. Sculptural but plausible arrangement on white plinth, direct sun shadows, no floating items. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-i-packaging.webp"
-    },
-    {
-      "id": "pop-i-shopper",
-      "sourceId": "i-shopper",
-      "brand": "PIEGA",
-      "prompt": "Use case: product-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Large freestanding violet paper shopping bag with thick butter-yellow oversized piega wordmark and twisted paper handles, alongside a folded butter paper pastry sleeve with violet zigzag. Warm-white background, beautiful sharp paper creases and cast shadow, original contemporary typographic packaging. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-i-shopper.webp"
-    },
-    {
       "id": "pop-i-cards",
       "sourceId": "i-cards",
       "brand": "MOSSA",
       "prompt": "Use case: product-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. MOSSA is a fictional independent movement studio. Signature identity: chunky custom lowercase 'mossa' wordmark with rounded wide letters, an asymmetric four-lobed black flower symbol, vivid hot pink #ef4b9b with chalk white and near-black, restrained pale pink secondary. Confident playful Swiss/postmodern graphic design, oversized tightly kerned type, intentional cropped typography, modular grids. No orange or green. No gradients. Scene: Five physical business cards in loose disciplined arrangement, hot pink, black and chalk. Giant rounded mossa, small four-lobed flower, one back reads 'Muoviti a modo tuo.' Short clear text, elegant asymmetric grid, edges visible, tangible thick uncoated paper. Top-down photographed, no interface frame. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
       "output": "public/images/services/pop-i-cards.webp"
-    },
-    {
-      "id": "pop-i-menu",
-      "sourceId": "i-menu",
-      "brand": "PIEGA",
-      "prompt": "Use case: product-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: A folded contemporary bakery printed menu opened on matte gray tabletop. Giant violet piega on butter cover, interior clean white with bold headings 'Pane', 'Dolci', 'Caffè', small neatly set price rows and one geometric fold symbol. Confident editorial design, not classic restaurant serif styling. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-i-menu.webp"
-    },
-    {
-      "id": "pop-c-interior",
-      "sourceId": "c-interior",
-      "brand": "PIEGA",
-      "prompt": "Use case: photorealistic-natural. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Editorial architectural photograph of contemporary independent bakery, white tile, brushed stainless counter, saturated violet sculptural stools, one large butter-yellow wall panel with lowercase piega. Real pastries sparsely arranged, daylight hard-edged shadows, lived-in credible minimal space, no people. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-c-interior.webp"
-    },
-    {
-      "id": "pop-c-product",
-      "sourceId": "c-product",
-      "brand": "PIEGA",
-      "prompt": "Use case: photorealistic-natural. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Close food campaign still life: real flaky croissant partly emerging from butter sleeve with giant violet piega, violet branded coffee cup, a few crumbs on stainless surface. Direct flash fashion-food photography with precise hard shadows and genuine texture, asymmetric composition. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-c-product.webp"
     },
     {
       "id": "pop-c-posts",
@@ -150,13 +73,6 @@
       "output": "public/images/services/pop-c-talent.webp"
     },
     {
-      "id": "pop-c-hands",
-      "sourceId": "c-hands",
-      "brand": "PIEGA",
-      "prompt": "Use case: photorealistic-natural. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Close authentic lifestyle campaign photo of adult hands naturally holding a violet piega takeaway cup and a butter-yellow pastry sleeve, cream casual clothing partially visible, stainless cafe counter. Real skin texture, correctly formed fingers and grip, directional daylight, contemporary fashion-food crop. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-c-hands.webp"
-    },
-    {
       "id": "pop-a-poster",
       "sourceId": "a-poster",
       "brand": "FUORI",
@@ -170,13 +86,6 @@
       "prompt": "Use case: product-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. FUORI is a fictional music and visual arts festival. Signature identity: extra-bold wide grotesk uppercase 'FUORI', split over two lines when useful, black and electric lemon yellow #edfa25 with clean white, small original geometric eye and directional cutout motifs. Contemporary Swiss punk graphic design, very confident typographic hierarchy, sophisticated negative space. No orange or green, no gradients. Scene: Top-down realistic photo of festival admission tickets and one fabric lanyard pass on chalk-gray surface. Lemon yellow, black and white, giant FUORI, simple arrow motif, short 'PASS', '18—19 GIUGNO', perforated ticket edge, compact printed barcode. Sharp print, physical paper, disciplined visual hierarchy. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
       "refinement": "Uniformare i dettagli evento a 18—19 GIUGNO, PARCO DELLE ARTI; rimuovere anni e luoghi discordanti.",
       "output": "public/images/services/pop-a-tickets.webp"
-    },
-    {
-      "id": "pop-a-promo",
-      "sourceId": "a-promo",
-      "brand": "PIEGA",
-      "prompt": "Use case: ads-marketing. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. PIEGA is a fictional contemporary bakery. Signature identity: oversized heavy rounded lowercase 'piega' wordmark, a simple folded zigzag ribbon symbol, intense ultramarine-violet #4930c8, pale butter #f5e7a8, warm white. Punchy typographic crops and playful geometric folds, fashion-editorial precision, contemporary graphic design. No orange or green. No gradients. Scene: Physical promotional campaign on table: large violet poster saying 'Una bella piega.' in oversized butter rounded type, two small butter flyers and a loyalty card with geometric fold marks. Bakery opening campaign, tiny piega signature, very bold typography and thoughtful white space, realistic print photographed. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
-      "output": "public/images/services/pop-a-promo.webp"
     },
     {
       "id": "pop-a-social",
@@ -200,5 +109,6 @@
       "prompt": "Use case: ui-mockup. Create ONE square premium agency portfolio image, full bleed, NOT a contact sheet or screenshot of a design website. GIULIA / 30 is a fictional private birthday party invitation. Signature identity: huge bold rounded numeral 30, tightly kerned grotesk 'GIULIA', hot pink and clean cream with deep black. Original playful spirals and tiny four-point motifs used sparingly. Fashion-forward editorial graphic design. No orange or green and no gradients. Scene: One modern smartphone on white studio surface next to pink envelope, showing contemporary birthday digital invitation: huge black 30 on hot pink, GIULIA, short 'Si festeggia.', white lower section with '12 GIUGNO' and black 'Ci sarò' RSVP button. Entire device visible, refined playful editorial composition, authentic shadow. Art direction: contemporary bold playful graphic identity seen in independent design studios, professionally designed then physically photographed. Believable light, material and perspective, crisp purposeful typography. Preserve neutral breathing room, make the actual design substantial in frame. Avoid generic AI glossy blobs, chrome liquid, gradients, neon glow, fake glassmorphism, random decorative clutter, watermarks, stock logo names, gibberish large text. All brands and artwork are original fictional concepts. Output one polished standalone square image.",
       "output": "public/images/services/pop-a-invite-mobile.webp"
     }
-  ]
+  ],
+  "currentSelection": "docs/farina-selection.json"
 }

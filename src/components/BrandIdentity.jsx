@@ -1,3 +1,4 @@
+import MarinaroWordmark from "./ui/MarinaroWordmark";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import EditorialTitle from "./ui/EditorialTitle";
@@ -18,6 +19,8 @@ import toteSmall from "../assets/brands/marinaro-tote-small.webp";
 import hoodie from "../assets/brands/marinaro-hoodie.webp";
 import hoodieSmall from "../assets/brands/marinaro-hoodie-small.webp";
 import "./BrandIdentity.css";
+import {useTranslation} from "../i18n/context.js";
+
 
 const mockups = [
   { id: "hoodie", name: "Hoodie", src: hoodie, small: hoodieSmall, width: 1120, height: 1400,
@@ -41,6 +44,8 @@ const galleryItems = [...mockups, { ...mockups[0], loop: true }];
 const centeredOffset = (rail, item) => item.offsetLeft - (rail.clientWidth - item.offsetWidth) / 2;
 
 export default function BrandIdentity() {
+  const {t:tr}=useTranslation();
+
   const rootRef = useRef(null);
   const railRef = useRef(null);
   const dialogRef = useRef(null);
@@ -172,7 +177,7 @@ export default function BrandIdentity() {
         </header>
 
         <ul ref={railRef} id="brands-gallery" className="identity-showcase__gallery"
-          aria-label="Applicazioni dell’identità Marinaro" aria-live="off" onScroll={syncSlide}
+          aria-label={tr("Applicazioni dell’identità Marinaro")} aria-live="off" onScroll={syncSlide}
           onKeyDown={(event) => {
             if (getComputedStyle(event.currentTarget).display === "contents") return;
             if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
@@ -185,25 +190,26 @@ export default function BrandIdentity() {
             <li key={mockup.loop ? "loop" : mockup.id} aria-hidden={mockup.loop || undefined} inert={mockup.loop || undefined}
               className={`identity-showcase__item identity-showcase__item--${mockup.id}${mockup.loop ? " identity-showcase__item--loop" : ""}`}>
               <button type="button" className="identity-showcase__object"
-                aria-label={`Apri ${mockup.name.toLowerCase()}`}
+                aria-label={tr(`Apri ${mockup.name.toLowerCase()}`)}
                 aria-haspopup="dialog" onClick={(event) => openMockup(index, event)}>
                 <span className="identity-showcase__float">
                   <img src={mockup.src} srcSet={`${mockup.small} 480w, ${mockup.src} ${mockup.width}w`}
                     sizes="(max-width: 900px) 76vw, 38vw" width={mockup.width} height={mockup.height}
-                    alt={mockup.alt} loading="lazy" decoding="async" draggable="false" />
+                    alt={tr(mockup.alt)} loading="lazy" decoding="async" draggable="false" />
                 </span>
               </button>
             </li>
           ))}
         </ul>
 
-        <div className="identity-showcase__navigation" aria-label="Navigazione mockup">
+        <p className="identity-showcase__transparency">{tr("Mockup dimostrativi con visual generati con AI.")}</p>
+        <div className="identity-showcase__navigation" aria-label={tr("Navigazione mockup")}>
           <div className="identity-showcase__arrows">
-            <button type="button" className="identity-showcase__arrow" aria-label="Mockup precedente"
+            <button type="button" className="identity-showcase__arrow" aria-label={tr("Mockup precedente")}
               aria-controls="brands-gallery" onClick={() => goToSlide(active - 1)}>
               <ChevronLeft size={20} strokeWidth={1.5} aria-hidden="true" />
             </button>
-            <button type="button" className="identity-showcase__arrow" aria-label="Mockup successivo"
+            <button type="button" className="identity-showcase__arrow" aria-label={tr("Mockup successivo")}
               aria-controls="brands-gallery" onClick={() => goToSlide(active + 1)}>
               <ChevronRight size={20} strokeWidth={1.5} aria-hidden="true" />
             </button>
@@ -211,7 +217,7 @@ export default function BrandIdentity() {
         </div>
       </div>
 
-      <dialog ref={dialogRef} className="brand-viewer" aria-label="Mockup Marinaro ingranditi" data-lenis-prevent
+      <dialog ref={dialogRef} className="brand-viewer" aria-label={tr("Mockup Marinaro ingranditi")} data-lenis-prevent
         onCancel={(event) => { event.preventDefault(); setSelected(null); }}
         onClose={() => { if (!dialogRef.current?.open) setSelected(null); }}
         onClick={(event) => { if (event.target === event.currentTarget) setSelected(null); }}
@@ -223,21 +229,21 @@ export default function BrandIdentity() {
         }}>
         {current && <>
           <div className="brand-viewer__top">
-            <span>MARINARO <span className="brand-viewer__muted">/ BRANDS</span></span>
-            <button ref={closeRef} type="button" className="brand-viewer__button" aria-label="Chiudi anteprima"
+            <span className="brand-viewer__signature"><MarinaroWordmark className="brand-viewer__wordmark"/><span className="brand-viewer__muted">{tr("/ BRANDS")}</span></span>
+            <button ref={closeRef} type="button" className="brand-viewer__button" aria-label={tr("Chiudi anteprima")}
               onClick={() => setSelected(null)}><X size={23} strokeWidth={1.5} aria-hidden="true" /></button>
           </div>
           <figure className="brand-viewer__figure" onClick={(event) => {
             if (event.target === event.currentTarget) setSelected(null);
           }}>
-            <img key={current.id} src={current.src} alt={current.alt} width={current.width}
+            <img key={current.id} src={current.src} alt={tr(current.alt)} width={current.width}
               height={current.height} decoding="async" draggable="false" />
-            <figcaption aria-live="polite">{current.name}</figcaption>
+            <figcaption aria-live="polite">{tr(current.name)} · {tr("Visual generato con AI")}</figcaption>
           </figure>
           <div className="brand-viewer__navigation">
-            <button type="button" className="brand-viewer__button" aria-label="Mockup precedente"
+            <button type="button" className="brand-viewer__button" aria-label={tr("Mockup precedente")}
               onClick={() => moveViewer(-1)}><ChevronLeft size={23} strokeWidth={1.5} aria-hidden="true" /></button>
-            <button type="button" className="brand-viewer__button" aria-label="Mockup successivo"
+            <button type="button" className="brand-viewer__button" aria-label={tr("Mockup successivo")}
               onClick={() => moveViewer(1)}><ChevronRight size={23} strokeWidth={1.5} aria-hidden="true" /></button>
           </div>
         </>}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-29",
+  "scope": "source and static production build; no live host/account inspection",
+  "credential_pattern_matches": [],
+  "private_env_files": [],
+  "source_maps_in_dist": 0,
+  "active_svg_matches": [],
+  "private_exif_tag_matches": [],
+  "tests": {
+    "passed": 52,
+    "failed": 0
+  },
+  "production_build": "passed",
+  "gpu_verification": "WebGL unavailable in browser; CSS fallback verified",
+  "javascript_modules_total": 116
+}

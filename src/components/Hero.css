@@ -13,3 +13,7 @@
 }
 
 @media(max-height:460px){.hero{min-height:390px!important}}
+
+.hero-project-button{background:#dbc0f5;border-color:#dbc0f5;color:#241a30}
+.hero-project-button:focus-visible{outline:3px solid #f4f4f5;outline-offset:4px}
+@media(hover:hover){.hero-project-button:hover{background:#ead6ff;border-color:#ead6ff}}

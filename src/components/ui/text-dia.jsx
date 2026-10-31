@@ -3,8 +3,12 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../lib/utils";
+import {useTranslation} from "../../i18n/context.js";
+
 
 export function DiaText({ words, duration = 2000, className, ...props }) {
+  const {t:tr}=useTranslation();
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -49,13 +53,13 @@ export function DiaText({ words, duration = 2000, className, ...props }) {
             animate={{ backgroundPosition: "0% 0%" }}
             transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
           >
-            {words[index]}
+            {tr(words[index])}
           </motion.span>
         </motion.span>
       </AnimatePresence>
 
       <span className="invisible" aria-hidden="true">
-        {words[index]}
+        {tr(words[index])}
       </span>
     </span>
   );

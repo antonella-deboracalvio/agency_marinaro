@@ -1,15 +1,19 @@
 import { useEffect, useId, useRef, useState } from "react";
 import ServiceVisual from "./ServiceVisual";
+import {useTranslation} from "../../i18n/context.js";
+
 
 export default function ServiceVisualPair({ section }) {
+  const {t:tr}=useTranslation();
+
   const [direction, setDirection] = useState("contemporary");
   const [active, setActive] = useState(0);
   const trackRef = useRef(null);
   const id = useId();
-  const visuals = direction === "contemporary" ? section.contemporaryVisuals : section.visuals;
+  const visuals = (direction === "contemporary" ? section.contemporaryVisuals : section.visuals) || [];
 
   useEffect(() => {
-    trackRef.current.scrollLeft = 0;
+    if (trackRef.current) trackRef.current.scrollLeft = 0;
     setActive(0);
   }, [direction]);
 
@@ -21,14 +25,15 @@ export default function ServiceVisualPair({ section }) {
     track.scrollTo({ left, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   };
 
-  return <div className="service-detail__art" data-direction={direction}>
-    <div className="service-art-directions" role="group" aria-label={`Stile degli esempi: ${section.label}`}>
-      <button type="button" aria-pressed={direction === "contemporary"} aria-controls={id} onClick={() => setDirection("contemporary")}>Pop & grafico</button>
-      <button type="button" aria-pressed={direction === "essential"} aria-controls={id} onClick={() => setDirection("essential")}>Essenziale & materico</button>
+  return <div className="service-detail__art" data-direction={direction} data-count={visuals.length}>
+    <div className="service-art-directions" role="group" aria-label={tr(`Stile degli esempi: ${section.label}`)}>
+      <button type="button" aria-pressed={direction === "contemporary"} aria-controls={id} onClick={() => setDirection("contemporary")}>{tr("Pop & grafico")}</button>
+      <button type="button" aria-pressed={direction === "essential"} aria-controls={id} onClick={() => setDirection("essential")}>{tr("Essenziale & materico")}</button>
     </div>
-    <div id={id} ref={trackRef} className="service-detail__visuals" tabIndex={0} role="region" aria-label={`Immagini: ${section.label}`}
+    <div id={id} ref={trackRef} className="service-detail__visuals" data-count={visuals.length} tabIndex={visuals.length > 1 ? 0 : undefined} role="region" aria-label={tr(`Immagini: ${section.label}`)}
       onScroll={() => {
         const track = trackRef.current;
+        if (!track.firstElementChild) return;
         const step = track.firstElementChild.getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
         setActive(Math.min(visuals.length - 1, Math.max(0, Math.round(track.scrollLeft / step))));
       }}
@@ -41,8 +46,8 @@ export default function ServiceVisualPair({ section }) {
       }}>
       {visuals.map(visual => <ServiceVisual key={visual.src} visual={visual} />)}
     </div>
-    <div className="service-art-pagination" role="group" aria-label="Scegli immagine">
-      {visuals.map((visual, index) => <button key={visual.src} type="button" aria-label={`Mostra ${visual.label}`} aria-pressed={active === index} aria-controls={id} onClick={() => move(index)}><span /></button>)}
-    </div>
+    {visuals.length > 1 && <div className="service-art-pagination" role="group" aria-label={tr("Scegli immagine")}>
+      {visuals.map((visual, index) => <button key={visual.src} type="button" aria-label={tr(`Mostra ${visual.label}`)} aria-pressed={active === index} aria-controls={id} onClick={() => move(index)}><span /></button>)}
+    </div>}
   </div>;
 }

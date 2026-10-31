@@ -62,7 +62,7 @@ La nuova direzione è visibile per prima. Ogni sezione offre due pulsanti: **Pop
 
 Nuova raccolta:
 - MOSSA: studio di movimento, rosa acceso, nero e bianco, lettering morbido e fotografia editoriale.
-- PIEGA: panetteria contemporanea, viola intenso e giallo burro, tipografia grande e pieghe geometriche.
+- FARINA: Bakery & Coffee, bordeaux e bianco caldo. Immagini selezionate, menu digitale e anteprima del sito aggiornati; dettagli in `AGGIORNAMENTO-FARINA.md`.
 - FUORI: festival, giallo limone e nero, tipografia e geometrie nette.
 - GIULIA / 30: invito di compleanno, rosa e nero, grande numero e composizione giocosa.
 

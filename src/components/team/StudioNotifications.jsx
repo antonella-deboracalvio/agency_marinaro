@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import {useTranslation} from "../../i18n/context.js";
+
 
 const phases = [
   { label: "Idea", text: "Ascoltiamo ciò che vuoi costruire." },
@@ -8,6 +10,8 @@ const phases = [
 ];
 
 export default function StudioNotifications() {
+  const {t:tr}=useTranslation();
+
   const root = useRef(null);
   const [active, setActive] = useState(0);
 
@@ -35,14 +39,14 @@ export default function StudioNotifications() {
   }, []);
 
   return (
-    <article className="studio-bento__messages" ref={root} aria-label="Dall’idea al sito online">
-      <p className="studio-notifications__label">Le idee si muovono.</p>
-      <ol className="studio-flow" aria-label="Le fasi: idea, design, codice, online">
+    <article className="studio-bento__messages" ref={root} aria-label={tr("Dall’idea al sito online")}>
+      <p className="studio-notifications__label">{tr("Le idee si muovono.")}</p>
+      <ol className="studio-flow" aria-label={tr("Le fasi: idea, design, codice, online")}>
         {phases.map((phase, index) => <li key={phase.label} data-active={index === active} data-complete={index <= active}>
-          <span>{phase.label}</span><i aria-hidden="true" />
+          <span>{tr(phase.label)}</span><i aria-hidden="true" />
         </li>)}
       </ol>
-      <p key={active} className="studio-flow__caption" aria-live="off">{phases[active].text}</p>
+      <p key={active} className="studio-flow__caption" aria-live="off">{tr(phases[active].text)}</p>
     </article>
   );
 }

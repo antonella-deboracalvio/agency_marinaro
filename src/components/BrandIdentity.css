@@ -228,3 +228,7 @@
   .identity-showcase__float { animation: none; }
   .identity-showcase__object img { transition: none; }
 }
+
+.brand-viewer__signature{display:inline-flex;align-items:center;gap:12px}.brand-viewer__wordmark{display:block;width:128px;height:auto;flex:none}
+
+.identity-showcase__transparency{font-size:11px;line-height:1.5;text-align:center;color:#b9b1c1;margin:12px 20px}

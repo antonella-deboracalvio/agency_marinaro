@@ -3,6 +3,8 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./BranchedMenu.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 // Adapted from the supplied React Bits Branched Menu. Icons are React elements,
 // so this version does not need Hugeicons or an animation dependency.
@@ -32,6 +34,8 @@ export default function BranchedMenu({
   className = "",
   ...props
 }) {
+  const {t:tr}=useTranslation();
+
   const id = useId();
   const [open, setOpen] = useState(() => toSet(defaultOpen));
   const [active, setActive] = useState(() => {
@@ -141,10 +145,10 @@ export default function BranchedMenu({
               data-active={leafActive ? "" : undefined}
               onClick={() => children ? !item.href && toggle(index) : select(item)}
             >
-              <span>{item.label}{children && item.href && <span className="branched-menu__page-arrow" aria-hidden="true">↗</span>}</span>
+              <span>{tr(item.label)}{children && item.href && <span className="branched-menu__page-arrow" aria-hidden="true">↗</span>}</span>
               {children && !item.href && <span className="branched-menu__toggle" aria-hidden="true" />}
             </Head>
-            {children && item.href && <button type="button" className="branched-menu__fold-button" aria-label={`${isOpen ? "Chiudi" : "Apri"} i servizi ${item.label}`} aria-expanded={isOpen} aria-controls={panelId} onClick={() => toggle(index)}><span className="branched-menu__toggle" aria-hidden="true" /></button>}
+            {children && item.href && <button type="button" className="branched-menu__fold-button" aria-label={tr(`${isOpen ? "Chiudi" : "Apri"} i servizi ${item.label}`)} aria-expanded={isOpen} aria-controls={panelId} onClick={() => toggle(index)}><span className="branched-menu__toggle" aria-hidden="true" /></button>}
             </div>
 
             {children && (
@@ -188,8 +192,8 @@ export default function BranchedMenu({
                           onFocus={() => setActive(child.value)}
                           onClick={() => select(child)}
                         >
-                          {child.icon && <span className="branched-menu__icon" aria-hidden="true">{child.icon}</span>}
-                          <span className="branched-menu__label">{child.label}</span>
+                          {child.icon && <span className="branched-menu__icon" aria-hidden="true">{tr(child.icon)}</span>}
+                          <span className="branched-menu__label">{tr(child.label)}</span>
                         </Row>
                       );
                     })}

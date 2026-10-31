@@ -35,8 +35,8 @@ export function validateApplication(data, step) {
     if (data.pitch.length > 500) errors.pitch = "Resta entro 500 caratteri.";
   }
   if (step === undefined || step === 2) {
-    if (data.name.trim().length < 2 || data.name.trim().length > 80) errors.name = "Inserisci il tuo nome (da 2 a 80 caratteri).";
-    if (data.email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) errors.email = "Inserisci un indirizzo email valido.";
+    if (data.name.trim().length < 2 || data.name.trim().length > 80 || /[\r\n\u0000-\u001f\u007f]/.test(data.name)) errors.name = "Inserisci il tuo nome (da 2 a 80 caratteri).";
+    if (data.email.length > 254 || !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(data.email.trim())) errors.email = "Inserisci un indirizzo email valido.";
   }
   return errors;
 }

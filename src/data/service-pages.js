@@ -9,10 +9,6 @@ export const servicePages = {
     title: "Soluzioni digitali fatte per funzionare.",
     description: "Creiamo siti web e strumenti digitali semplici da usare, belli da vedere e pensati per rendere più facile il lavoro della tua attività.",
     accent: "#c8d2dc",
-    gallery: [
-      visual("Desktop", "#c8d2dc"), visual("Sito mobile", "#dcddd6"),
-      visual("Prenotazioni", "#b9bbc8"), visual("Gestionale", "#b4c5c9"), visual("Menu QR", "#dad5ca"),
-    ],
     sections: [
       {
         id: "siti-web", label: "Siti web su misura", title: "Il tuo sito, costruito intorno alla tua attività.",
@@ -74,10 +70,6 @@ export const servicePages = {
     title: "Diamo un volto riconoscibile alla tua attività.",
     description: "Dal logo ai materiali che usi ogni giorno, creiamo uno stile visivo chiaro, coerente e facile da riconoscere.",
     accent: "#d2c5b4",
-    gallery: [
-      visual("Logo", "#d8cbbb"), visual("Palette e caratteri", "#d9d7ce"), visual("Packaging", "#bab4aa"),
-      visual("Card fedeltà", "#c8c5ce"), visual("Insegna", "#b8c3c5"), visual("Menu", "#e3dccf"), visual("Materiali coordinati", "#c6c1b4"),
-    ],
     sections: [
       {
         id: "logo", label: "Logo design", title: "Un logo che rappresenta la tua attività.",
@@ -139,10 +131,6 @@ export const servicePages = {
     title: "Contenuti veri per raccontare la tua attività.",
     description: "Foto, video brevi e grafiche pronte da usare sui tuoi social. Noi creiamo il materiale, tu lo pubblichi.",
     accent: "#c6bed5",
-    gallery: [
-      visual("Il tuo locale", "#c7bdd0"), visual("Foto di prodotto", "#d7d1c7"), visual("Talent", "#c3c9bf"),
-      visual("Post social", "#d8d3df"), visual("Stories", "#bdcbd0"), visual("Dettagli lifestyle", "#cfc3b7"),
-    ],
     sections: [
       {
         id: "content-shoot", label: "Content shoot", title: "Portiamo la tua attività dentro i contenuti.",
@@ -198,10 +186,6 @@ export const servicePages = {
     title: "Diamo un’identità anche ai tuoi eventi.",
     description: "Visual e materiali grafici per eventi, promozioni, aperture e occasioni speciali. Un’idea chiara, declinata nei formati che ti servono.",
     accent: "#bfcad5",
-    gallery: [
-      visual("Poster", "#c0cad5"), visual("Story evento", "#d0c5d3"), visual("Ticket", "#ded6c5"),
-      visual("Flyer", "#bbc7c1"), visual("Invito digitale", "#d3d3d7"), visual("Visual coordinato", "#c7beb1"),
-    ],
     sections: [
       {
         id: "event-visuals", label: "Event visuals", title: "Un evento che si riconosce al primo sguardo.",
@@ -226,15 +210,15 @@ export const servicePages = {
         service: "promotional", cta: "Diamo spazio alla tua novità",
       },
       {
-        id: "digital-invitations", label: "Digital invitations", title: "Un invito pensato per la tua occasione.",
+        id: "digital-invitations", label: "Inviti digitali", title: "Il tuo evento comincia con un link.",
         paragraphs: [
-          "Creiamo inviti digitali personalizzati per eventi privati e aziendali. Puoi scegliere una grafica da condividere oppure una pagina con le informazioni dell’evento.",
-          "Stile, contenuti e funzioni si definiscono insieme, in base al tipo di invito e a come vuoi farlo arrivare ai tuoi ospiti.",
+          "Un invito da inviare su WhatsApp, via email o con un QR. Si apre direttamente sul telefono, senza scaricare un’app, con uno stile creato per la tua occasione.",
+          "In un’unica pagina riuniamo data, luogo e programma. Possiamo aggiungere la conferma di partecipazione e il collegamento alla mappa, così i tuoi ospiti trovano subito ciò che serve.",
         ],
-        listTitle: "Per le occasioni che contano",
-        items: ["Compleanni", "Lauree", "Matrimoni", "Inaugurazioni", "Eventi aziendali", "Feste private"],
-        visuals: [visual("Invito digitale", "#dbd8d0"), visual("Versione smartphone", "#bfc8d0")],
-        service: "invitations", cta: "Creiamo il tuo invito",
+        listTitle: "Tutto, in un solo link",
+        items: ["Data, luogo e programma", "Indicazioni per arrivare", "Conferma di partecipazione", "Condivisione via WhatsApp o email", "Grafica su misura", "Layout per smartphone"],
+        visuals: [visual("Invito su smartphone", "#bfc8d0")],
+        service: "invitations", cta: "Progettiamo il tuo invito digitale",
       },
     ],
     delivery: {
@@ -250,14 +234,20 @@ export const servicePages = {
   },
 };
 
+// Selection is independent of the service copy and of the other image collection.
+// Missing/rejected artwork is omitted; aliases sharing one image render only once.
+const uniqueVisuals = visuals => [...new Map(visuals.filter(Boolean).map(item => [item.src, item])).values()];
+
 for (const [areaId, page] of Object.entries(servicePages)) {
   const collection = serviceArtwork[areaId];
-  page.gallery = page.gallery.flatMap((visual, index) => [
-    { ...visual, ...contemporaryArtwork[collection.gallery[index]] },
-    { ...visual, ...artwork[collection.gallery[index]] },
-  ]);
   for (const section of page.sections) {
-    section.contemporaryVisuals = section.visuals.map((visual, index) => ({ ...visual, ...contemporaryArtwork[collection.sections[section.id][index]] }));
+    const keys = areaId === 'digital' && section.id === 'siti-web'
+      ? ['farina-web', 'd-mobile']
+      : collection.sections[section.id];
+    section.contemporaryVisuals = uniqueVisuals(keys.map((key, index) => {
+      const image = contemporaryArtwork[key];
+      return image ? { ...(section.visuals[index] || section.visuals[0]), ...image } : null;
+    }));
     section.visuals = section.visuals.map((visual, index) => ({ ...visual, ...artwork[collection.sections[section.id][index]] }));
   }
 }

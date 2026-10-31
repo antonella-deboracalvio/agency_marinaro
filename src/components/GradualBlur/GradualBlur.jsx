@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./GradualBlur.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 const DEFAULT_CONFIG = {
   position: "bottom",
@@ -102,6 +104,8 @@ const useIntersectionObserver = (ref, shouldObserve = false) => {
 };
 
 function GradualBlur(props) {
+  const {t:tr}=useTranslation();
+
   const containerRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -212,7 +216,7 @@ function GradualBlur(props) {
       onMouseEnter={hoverIntensity ? () => setIsHovered(true) : undefined}
       onMouseLeave={hoverIntensity ? () => setIsHovered(false) : undefined}
     >
-      <div className="gradual-blur-inner">{blurDivs}</div>
+      <div className="gradual-blur-inner">{tr(blurDivs)}</div>
     </div>
   );
 }

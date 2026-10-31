@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="image" href="/brand/marinaro-monogram.svg" />
+    <link rel="preload" as="image" href="/brand/marinaro-wordmark.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050508" />
     <meta
@@ -10,9 +12,35 @@
       content="Marinaro Digital Studio: siti web, identità visive, menu QR e gestionali su misura. Design e sviluppo per dare forma al tuo prossimo progetto."
     />
     <title>Marinaro Digital Studio — Design e sviluppo web</title>
+    <style>
+      #startup-loader{--startup-progress:16%;position:fixed;inset:0;z-index:10000;display:grid;place-items:center;background:#08080b;color:#f5f3ef;transition:opacity .18s ease;pointer-events:auto}
+      .startup-loader__center{display:flex;flex-direction:column;align-items:center;gap:27px}
+      .startup-loader__mark{position:relative;width:clamp(86px,14vw,132px);aspect-ratio:1}
+      .startup-loader__mark img{display:block;width:100%;height:100%}
+      .startup-loader__base{opacity:.16}
+      .startup-loader__fill{position:absolute;inset:0;clip-path:inset(calc(100% - var(--startup-progress)) 0 0);transition:clip-path .18s ease}
+      .startup-loader__name{margin:0;width:clamp(168px,28vw,232px)}
+      .startup-loader__name img{display:block;width:100%;height:auto}
+      .startup-loader__status{display:flex;align-items:baseline;justify-content:space-between;width:clamp(168px,28vw,232px);gap:24px;font:400 11px/1.4 Arial,sans-serif;color:#aaa4b2;letter-spacing:.03em}
+      #startup-percentage{color:#e4d7f1;font-variant-numeric:tabular-nums;font-size:13px;min-width:4ch;text-align:right}
+      #startup-loader.is-complete{opacity:0;pointer-events:none}
+      .startup-error{margin:0;padding:30vh 24px;text-align:center;background:#08080b;color:#f5f3ef;font:14px/1.6 Arial,sans-serif}.startup-error a{color:#d6b9f0;text-decoration:underline}
+      @media(prefers-reduced-motion:reduce){#startup-loader,.startup-loader__fill{transition:none}}
+    </style>
   </head>
   <body>
+    <div id="startup-loader" role="progressbar" aria-label="Caricamento" aria-valuemin="0" aria-valuemax="100" aria-valuenow="16">
+      <div class="startup-loader__center" aria-hidden="true">
+        <div class="startup-loader__mark">
+          <img class="startup-loader__base" src="/brand/marinaro-monogram.svg" width="132" height="132" alt="" />
+          <img class="startup-loader__fill" src="/brand/marinaro-monogram.svg" width="132" height="132" alt="" />
+        </div>
+        <p class="startup-loader__name"><img src="/brand/marinaro-wordmark.svg" width="904" height="84" alt="MARINARO" /></p>
+        <div class="startup-loader__status"><span id="startup-caption">Caricamento</span><span id="startup-percentage">16%</span></div>
+      </div>
+    </div>
     <div id="root"></div>
+    <script src="/startup.js"></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

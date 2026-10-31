@@ -4,18 +4,21 @@ import { Link } from "react-router-dom";
 import { projects } from "../../data/projects";
 import EditorialTitle from "../ui/EditorialTitle";
 import "./ProjectsTeaser.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 const featuredProjects = projects.filter(project => project.homeFeatured);
 
 export default function ProjectsTeaser() {
+  const {t:tr}=useTranslation();
+
   const reduceMotion = useReducedMotion();
 
   return (
     <section id="projects-teaser" className="projects-teaser" aria-labelledby="projects-teaser-title">
       <header className="projects-teaser__header">
-        <EditorialTitle id="projects-teaser-title">Works</EditorialTitle>
-        <Link className="projects-teaser__header-link" to="/progetti">
-          Guarda tutti i progetti <ArrowUpRight aria-hidden="true" />
+        <EditorialTitle id="projects-teaser-title">{tr("Works")}</EditorialTitle>
+        <Link className="projects-teaser__header-link" to="/progetti">{tr("Guarda tutti i progetti ")}<ArrowUpRight aria-hidden="true" />
         </Link>
       </header>
 
@@ -31,13 +34,14 @@ export default function ProjectsTeaser() {
                   width={project.coverWidth}
                   height={project.coverHeight}
                   decoding="async"
-                  alt={`Anteprima del progetto ${project.title}`}
+                  alt={tr(`Anteprima del progetto ${project.title}`)}
                   loading="lazy"
                   initial={reduceMotion ? false : { opacity: 0 }}
                   whileInView={reduceMotion ? undefined : { opacity: 1 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 />
+                {project.status === "Concept" && <span className="projects-teaser__concept">{tr("Concept · visual AI")}</span>}
               </div>
               <motion.div
                 className="projects-teaser__project-copy"
@@ -47,16 +51,16 @@ export default function ProjectsTeaser() {
                 transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
               >
                 <div>
-                  <h3>{project.title}</h3>
-                  <p>{project.category}</p>
+                  <h3>{tr(project.title)}</h3>
+                  <p>{tr(project.category)}{project.status === "Concept" && <> · {tr("Concept")}</>}</p>
                 </div>
-                <strong>{project.result}</strong>
+                <strong>{tr(project.result)}</strong>
                 <ArrowUpRight aria-hidden="true" />
               </motion.div>
             </>
           );
 
-          return <Link key={project.id} className="projects-teaser__project" to={project.detailPath}>{projectContent}</Link>;
+          return <Link key={project.id} className="projects-teaser__project" to={project.detailPath}>{tr(projectContent)}</Link>;
         })}
       </div>
 

@@ -1,4 +1,8 @@
+
+import {useTranslation} from "../i18n/context.js";
 export default function MobileServiceScrollCards({ services }) {
+  const {t:tr}=useTranslation();
+
   return (
     <div className="mobile-service-scroll px-5 pb-4 pt-6 md:hidden">
       <div className="mobile-service-stack">
@@ -17,7 +21,7 @@ export default function MobileServiceScrollCards({ services }) {
               {service.image && (
                 <img
                   src={service.image}
-                  alt=""
+                  alt={tr("")}
                   className="absolute inset-0 h-full w-full object-cover opacity-45"
                 />
               )}
@@ -26,7 +30,7 @@ export default function MobileServiceScrollCards({ services }) {
 
               <div className="relative z-10 flex h-full flex-col justify-between">
                 <div className="flex items-start justify-between">
-                  <span className="text-xs font-black tracking-[0.18em] text-primary">{service.number}</span>
+                  <span className="text-xs font-black tracking-[0.18em] text-primary">{tr(service.number)}</span>
 
                   <div className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/30 bg-primary/15 text-primary">
                     <Icon size={18} />
@@ -34,8 +38,8 @@ export default function MobileServiceScrollCards({ services }) {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-black leading-tight text-foreground">{service.title}</h3>
-                  <p className="mt-4 text-sm leading-6 text-foreground/70">{service.description ?? service.text}</p>
+                  <h3 className="text-2xl font-black leading-tight text-foreground">{tr(service.title)}</h3>
+                  <p className="mt-4 text-sm leading-6 text-foreground/70">{tr(service.description ?? service.text)}</p>
                 </div>
               </div>
             </article>

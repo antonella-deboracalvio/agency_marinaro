@@ -20,7 +20,7 @@ test("i dodici collegamenti della home arrivano a una sezione della pagina corre
     const ids = page.sections.map(section => section.id);
     assert.equal(new Set(ids).size, ids.length);
     for (const link of area.links) assert.ok(ids.includes(link.anchor), `${area.href}#${link.anchor}`);
-    assert.ok(page.gallery.length >= 3);
+    assert.equal(page.gallery, undefined);
   }
 });
 
@@ -42,12 +42,12 @@ test("ogni invito delle nuove pagine preseleziona un servizio riconosciuto dal m
 test("i nuovi servizi attraversano l’endpoint e arrivano nel riepilogo email senza perdere le scelte", async () => {
   const calls = [];
   const handler = createContactHandler({
-    env: { RESEND_API_KEY: "test-only", MAIL_FROM: "Studio <studio@example.com>", MAIL_TO: "team@example.com", SITE_URL: "https://studio.example" },
+    env: { PRIVACY_NOTICE_VERSION: "test-notice-v1", RESEND_API_KEY: "test-only", MAIL_FROM: "Studio <studio@example.com>", MAIL_TO: "team@example.com", SITE_URL: "https://studio.example" },
     fetchImpl: async (url, init) => { calls.push(JSON.parse(init.body)); return Response.json({ id: "test-only-accepted" }); },
   });
   const response = await handler(new Request("https://studio.example/api/contact", {
     method: "POST", headers: { origin: "https://studio.example", "Content-Type": "application/json" },
-    body: JSON.stringify({ ...initialInquiry, services: ["packaging", "materials", "shoot", "social", "talent", "events", "promotional", "invitations"], timing: "Da definire insieme", message: "Vorrei realizzare i materiali per la mia nuova attività.", name: "Cliente Test", email: "cliente@example.com", website: "", requestId: "b672783a-6573-4867-99b2-3671409ad172" }),
+    body: JSON.stringify({ ...initialInquiry, services: ["packaging", "materials", "shoot", "social", "talent", "events", "promotional", "invitations"], timing: "Da definire insieme", message: "Vorrei realizzare i materiali per la mia nuova attività.", name: "Cliente Test", email: "cliente@example.com", privacyNoticeVersion: "test-notice-v1", website: "", requestId: "b672783a-6573-4867-99b2-3671409ad172" }),
   }));
   assert.equal(response.status, 200);
   assert.equal(calls.length, 1);

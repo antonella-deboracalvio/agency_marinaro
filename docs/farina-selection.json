@@ -1,0 +1,362 @@
+{
+  "brand": "FARINA",
+  "generation": "Original built-in image_gen assets selected in conversation",
+  "assets": [
+    {
+      "id": "logo",
+      "source": "farina-concept/immagini/01-logo.png",
+      "sha256": "740dc2e1cc15b4fb986755da1495bcd4cb7a492baacffa4d9fd75bb60fd0bacd",
+      "selection_note": null,
+      "variants": [
+        {
+          "src": "/images/services/farina-logo-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 73508,
+          "sha256": "e0986bad39b4621c1b9c280c9ce81c82085448142f7265ba1f911681f26d013c"
+        },
+        {
+          "src": "/images/services/farina-logo-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 147142,
+          "sha256": "5d99ecab9bbc7e51e7812a7770f292e506dcac5df5d812733213acbdc81f6b0f"
+        },
+        {
+          "src": "/images/services/farina-logo.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 264454,
+          "sha256": "61ecdc5fe21a0601db5c8e36a04621609fb2bd7284dfc7b79ca2b30ab53f6825"
+        }
+      ]
+    },
+    {
+      "id": "sign",
+      "source": "farina-concept/immagini/02-insegna.png",
+      "sha256": "cbb61ec32903b9fc2b4a686fa5122894ab7a02207e7f274e372b66f645c185de",
+      "selection_note": null,
+      "variants": [
+        {
+          "src": "/images/services/farina-sign-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 107132,
+          "sha256": "72896b527e0141ed577c93560ebd933612855cdccb468514bca365a7cf0149a7"
+        },
+        {
+          "src": "/images/services/farina-sign-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 213934,
+          "sha256": "f5db362590b1ecc59a0863c79ab6e32ba8f90e03251e3d3d1242260680f288f8"
+        },
+        {
+          "src": "/images/services/farina-sign.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 380412,
+          "sha256": "b8f0015c068660bbc6be7212f93bce2f4038170de254c1973b6c3e13edf6a930"
+        }
+      ]
+    },
+    {
+      "id": "packaging",
+      "source": "farina-concept/immagini/03-packaging.png",
+      "sha256": "be17167fd23cef0612e2eeaf80898f26d37d74b0c8696fe4bffcedbad18316dc",
+      "selection_note": null,
+      "variants": [
+        {
+          "src": "/images/services/farina-packaging-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 53128,
+          "sha256": "85f6b75b4e584f82d48293e804268c520267ab73ff9453646a615909f1685d5c"
+        },
+        {
+          "src": "/images/services/farina-packaging-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 91972,
+          "sha256": "98dd7e688edf9a37ac1c3fcbb85608e2e271736b8709f846df06b26eef9c8488"
+        },
+        {
+          "src": "/images/services/farina-packaging.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 165412,
+          "sha256": "1295c37eb3442fadf45e513effa01b06326ae853645639ad610ddbc6d7c74ba2"
+        }
+      ]
+    },
+    {
+      "id": "shopper",
+      "source": "farina-concept/immagini/04-shopper.png",
+      "sha256": "63a46cad61a9ed2d199c11a96e5028246eadc5a09e7ed8a0dd890968cc37efe8",
+      "selection_note": null,
+      "variants": [
+        {
+          "src": "/images/services/farina-shopper-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 60112,
+          "sha256": "c814ee12628c0ac8170e4c612c89b4a945b334cea52e3b7562644f30a3b1bad6"
+        },
+        {
+          "src": "/images/services/farina-shopper-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 106782,
+          "sha256": "611db15cbb41c8983f865ea1f7929247bfaee35b0dca62f36618069165eb9def"
+        },
+        {
+          "src": "/images/services/farina-shopper.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 192726,
+          "sha256": "774f9d5df9fac46de5c435f2e81dee93d5a02bd56395faaaff6464c0e3d40c8a"
+        }
+      ]
+    },
+    {
+      "id": "window-menu",
+      "source": "generated_images/exec-04dc330c-4627-49b4-bc42-a3b7588e91bf.png",
+      "sha256": "3e47a900f66244642c8178cf3d437511ae32312eba5a89317969ae3818cebc15",
+      "selection_note": "Ultima variante con scritte bianche sul vetro.",
+      "variants": [
+        {
+          "src": "/images/services/farina-window-menu-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 69804,
+          "sha256": "c5d6bbc8a4a1bd5bdb7058a6ad70eecaf8687caba1190d87ef38db364e039f16"
+        },
+        {
+          "src": "/images/services/farina-window-menu-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 116866,
+          "sha256": "b3affd9e933240f9b87b448e4cf697d7bd579e196cfe18321a8f665ad53be9cd"
+        },
+        {
+          "src": "/images/services/farina-window-menu.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 190974,
+          "sha256": "fc52f3df2677f4a05750ee2852808415e8e01f49eb70339c6628e25e8f5b7d00"
+        }
+      ]
+    },
+    {
+      "id": "interior",
+      "source": "farina-concept/immagini/06-interno.png",
+      "sha256": "6726781f57c1ad4db9dad7689f59a3db43f969c6e789b546be0f406345a95836",
+      "selection_note": null,
+      "variants": [
+        {
+          "src": "/images/services/farina-interior-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 106308,
+          "sha256": "25c9975ce85a8cd4fcde5b37d9606922331fdfc47688cf179f22ea862b706628"
+        },
+        {
+          "src": "/images/services/farina-interior-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 196334,
+          "sha256": "18d8aba3b847fd3c87d5f81d81e6d7191d41ad5018d8164e299f30cec2ddd8e2"
+        },
+        {
+          "src": "/images/services/farina-interior.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 321340,
+          "sha256": "d3237bd616362b4abeca2dae1da1a11f1b5d0f20f75a293f6d06ec56e973bb6c"
+        }
+      ]
+    },
+    {
+      "id": "bread",
+      "source": "generated_images/exec-edbafcac-2897-4d01-96c2-c76e581e5889.png",
+      "sha256": "4368a7d9aaa340065a9a09afe543e1f933e994caa3219633b25b61c082ddb223",
+      "selection_note": "Variante con pagnotta al posto del cornetto.",
+      "variants": [
+        {
+          "src": "/images/services/farina-bread-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 48316,
+          "sha256": "179ca3d48df139f8b2bcfd263ec6d819d767dce8af9d1cf8c41135d290e6005c"
+        },
+        {
+          "src": "/images/services/farina-bread-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 86886,
+          "sha256": "3061903d548c7536537b1c451e7752ca6a69fee1bee85e81b42adbf0ad0858a0"
+        },
+        {
+          "src": "/images/services/farina-bread.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 159220,
+          "sha256": "bc418af0e81f0093cbe2370a44015eeea25873fb9bd06d97f88487794403482e"
+        }
+      ]
+    },
+    {
+      "id": "qr-menu",
+      "source": "generated_images/exec-1a80d175-455f-4cd9-935d-cbbabc44f364.png",
+      "sha256": "f774dd7982ca9abac23effba5a8cd901ef0bfd10a692b478ec5786b8c61aaec1",
+      "selection_note": "Ultimo supporto orizzontale con menu digitale a categorie e schede prodotto.",
+      "variants": [
+        {
+          "src": "/images/services/farina-qr-menu-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 74082,
+          "sha256": "5cad57fc0c5c93caf7c31c0e6ebb580ea30627a7ee2d87242e55de463fd6624c"
+        },
+        {
+          "src": "/images/services/farina-qr-menu-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 123934,
+          "sha256": "bdd73db847a314226e20cd5dd9ea85f82e4b5e2fb85f4240e9810b435218ee98"
+        },
+        {
+          "src": "/images/services/farina-qr-menu.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 204216,
+          "sha256": "00bd91e148a75d3b9c1dc584497b98ac74691bf1d0197cd849ad355e49afe5d4"
+        }
+      ]
+    },
+    {
+      "id": "dashboard",
+      "source": "farina-concept/immagini/12-dashboard.png",
+      "sha256": "d0064cc8f6e9c6cd56389a1ce9204cc6389b9c9aa4ad9922f3e9bac4265671c5",
+      "selection_note": null,
+      "variants": [
+        {
+          "src": "/images/services/farina-dashboard-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 61430,
+          "sha256": "8defa3c8de71f5947f2841019d403439edc73a235cbb25ab03d7ac0a20284c4a"
+        },
+        {
+          "src": "/images/services/farina-dashboard-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 105392,
+          "sha256": "db3ff1f7789e4d2f54cfa683bb284f75c94838f4411044a0fd706d557d7a8f26"
+        },
+        {
+          "src": "/images/services/farina-dashboard.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 176272,
+          "sha256": "68af2bee4ff66e2a7fb7f99544ffe69004175ac8261fd380f602354fce029a4a"
+        }
+      ]
+    },
+    {
+      "id": "inventory",
+      "source": "farina-concept/immagini/13-scorte.png",
+      "sha256": "a24a9c7dd8e575eeabe1c0c3dfeb3bcfdefc87e381a4a45e8b01cb51a00a394f",
+      "selection_note": null,
+      "variants": [
+        {
+          "src": "/images/services/farina-inventory-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 61608,
+          "sha256": "003fed0fc1c4616180d65a6ce5b27d52390a48d1227ccbac0f416e817e280252"
+        },
+        {
+          "src": "/images/services/farina-inventory-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 105468,
+          "sha256": "4ab4e099e03b21b6d1026e3aed7176362b880e822286f1dfa933757e001ae794"
+        },
+        {
+          "src": "/images/services/farina-inventory.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 179876,
+          "sha256": "5ff14473f796e53d9ea1c62dc22adb7e66175628208dedb07307384808b19425"
+        }
+      ]
+    },
+    {
+      "id": "website",
+      "source": "/workspace/scratch/ea06439d60de/contact-farina-reference/agency creative/FARINA: vetrina digitale di prodotti autentici.png",
+      "sha256": "0fbb182e33ef3a96c52d6876265c1edd9f593bfd23dd2b1f50c2416058171823",
+      "selection_note": "Latest generated website image explicitly approved for replacement by the user, with dark chocolate cookies. Square framing unchanged.",
+      "variants": [
+        {
+          "src": "/images/services/farina-website-approved-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 98172,
+          "sha256": "3dc8141fb6b08aa2692af92beeed3a270e7a2fd7c311f9e81845e271a0fe1c0c"
+        },
+        {
+          "src": "/images/services/farina-website-approved-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 180718,
+          "sha256": "16287bb62b82ac3da9a20f81ef2554dd1e04a5dc664587435940e8cc7312bdf2"
+        },
+        {
+          "src": "/images/services/farina-website-approved.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 262820,
+          "sha256": "08e1aa693bfd863719288db0e096a80bb5ffb5b6aec202478a8a8e5ac1e86026"
+        }
+      ],
+      "generation": {
+        "mode": "built-in image_gen",
+        "selection": "Latest generated FARINA website in conversation"
+      },
+      "previous_source": "/workspace/scratch/ea06439d60de/generated_images/exec-4e544fb4-dbb2-4feb-99e2-91d24af93cf2.png",
+      "history": [
+        {
+          "source": "/workspace/scratch/ea06439d60de/generated_images/exec-569c9e4f-903d-4b1d-a4e0-d114e4d09edb.png",
+          "sha256": "e63bff27a2a9496ee26318eeb631f3417846f5009a761e553edb3c07738e8a01",
+          "generation": {
+            "mode": "built-in image_gen edit",
+            "prompt": "Use case: precise-object-edit / ui-mockup. Edit target: the supplied FARINA bakery website screenshot. Adapt exactly this website into a SQUARE 1:1 screenshot that will fill a square portfolio image container edge to edge. Preserve the same FARINA burgundy/white visual identity, all existing text, same bread/espresso hero imagery, same five category icons and all THREE popular-product cards including their names and prices. Keep a true front-on flat website screenshot, no devices, no browser frame, no extra background. Reflow only vertical layout to square: increase hero height substantially (same two-column hero, matching extended photographic crop), increase vertical breathing room between category row and 'I più richiesti' heading, increase product card height. Every title and product fits wholly inside image. Full image width is the website; no cream/gray bars, no letterboxing, no empty margins at top/bottom. Text must be sharp Italian: 'La tua pausa, a modo tuo.', 'Pane, caffè e cose fatte bene.', 'Esplora il menu', 'I più richiesti', 'I preferiti, ogni giorno.', 'Cookies al cioccolato', 'Muffin al cioccolato', 'Cinnamon roll'. Keep category icons separated and NO heart icon by the search. No search bar below hero. No bottom 'Ci vediamo da Farina' section. Do not redesign the brand, food or typography. Professional clean realistic modern web screenshot. Output square."
+          }
+        },
+        {
+          "source": "/workspace/scratch/ea06439d60de/generated_images/exec-ccd2f31b-a949-4db9-818d-e6fa2d272e51.png",
+          "sha256": "071d409c6144d33e444c779b2dff879498373182038294c7341542688a0b5fe9",
+          "generation": {
+            "mode": "built-in image_gen edit",
+            "prompt": "Use case: precise-object-edit.\nEdit target: supplied SQUARE FARINA website screenshot. Correct ONLY the food photography which currently looks like plastic or fantasy patterns. Keep the exact square screenshot, UI geometry, all text, logo, typography, burgundy and white palette, category icons, spacing and THREE product cards unchanged.\nThe food should look like ordinary actual handmade bakery products photographed for a real independent Italian bakery, not styled 3D models.\nHERO PHOTO: Replace the bagged loaf with a simple round sourdough loaf with a NATURAL brown matte crust, a single real scoring cut and a light irregular dusting of flour. Absolutely no seeds arranged in decorative patterns, no mosaic or checkerboard texture, no scales. Replace the foreground bread with ONE slice of real tomato focaccia pugliese: golden flat uneven surface, two clearly recognizable baked cherry tomato halves, a few irregular oregano flecks, visible natural open crumb, small pores and subtle olive oil. Remove all surreal tendrils and giant herb stems. Keep the FARINA paper bag, ceramic coffee cup and saucer and marble counter, with believable daylight and natural camera depth of field. Coffee is actual brown espresso with fine crema.\nPRODUCT LEFT: Two or three thin irregular handmade chocolate chip cookies with normal dark chocolate chips, browned crisp edges, natural crumb and tiny cracks. No artificial mound, no geometric chocolate decoration or uniformly modeled bumps.\nPRODUCT MIDDLE: A simple real baked chocolate muffin with an imperfect matte domed top, natural cracks and a few small melted chocolate chips in a brown paper muffin case. No huge triangular chocolate shards or synthetic crystalline surfaces.\nPRODUCT RIGHT: A small ordinary cinnamon roll with identifiable rolled dough layers, a natural cinnamon-brown swirl and a little thin irregular white icing. No glossy plastic shell, ornate decorative scales, huge white icing pipes or surreal pastry.\nAll food should have honest edible texture, moderate natural color, slightly irregular shapes, real contact shadows, no oversharpening, no CGI, no illustration, no AI-looking material. Keep original positions and scales of the food photos in their allocated screenshot regions. Do not add more objects or decorative ingredients. Preserve ALL Italian wording, prices and navigation exactly, legible. Preserve the selected layout edge to edge and no cropping. Square 1:1 output."
+          }
+        },
+        {
+          "source": "public/previews/farina-website.html",
+          "sha256": "0e03911268de8f641a46248118bff1a9356a08931d4a772ede6f036d9dcb4051",
+          "generation": {
+            "mode": "native HTML/CSS",
+            "photo_sources": "docs/farina-photo-sources.json"
+          }
+        }
+      ],
+      "source_library_file_id": "libfile_fcd67ce9be2c819186fb0a6c70a2d810"
+    }
+  ],
+  "excluded_numbers": [
+    "07",
+    "09",
+    "10"
+  ]
+}

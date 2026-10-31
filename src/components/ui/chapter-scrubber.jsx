@@ -4,6 +4,8 @@ import { memo, useCallback, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { observeChapterAutoplay } from "../../lib/chapter-autoplay";
 import "./chapter-scrubber.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 const TICKS_PER_CHAPTER = 6;
 const ROW_HEIGHT = 9;
@@ -31,6 +33,8 @@ const Tick = memo(function Tick({ index, pointer, current }) {
 // Adapted from the supplied Chapter Scrubber. Existing React + Framer Motion
 // are sufficient. The automatic sequence runs only while visible.
 export function ChapterScrubber({ chapters = [], label = "Le fasi del progetto", autoPlay = true, interval = 1500 }) {
+  const {t:tr}=useTranslation();
+
   const rootRef = useRef(null);
   const cardRef = useRef(null);
   const tabsRef = useRef([]);
@@ -97,7 +101,7 @@ export function ChapterScrubber({ chapters = [], label = "Le fasi del progetto",
         className="chapter-scrubber__scene"
         style={{ minHeight: Math.max(totalHeight, cardHeight) }}
       >
-        <div className="chapter-scrubber__rail" role="tablist" aria-label={label} aria-orientation="vertical" onKeyDown={handleKeyDown}>
+        <div className="chapter-scrubber__rail" role="tablist" aria-label={tr(label)} aria-orientation="vertical" onKeyDown={handleKeyDown}>
           {chapters.map((item, index) => (
             <button
               key={item.id}
@@ -108,15 +112,15 @@ export function ChapterScrubber({ chapters = [], label = "Le fasi del progetto",
               className="chapter-scrubber__chapter"
               aria-selected={index === activeIndex}
               aria-controls={`${baseId}-preview`}
-              aria-label={`${index + 1} di ${chapters.length}: ${item.title}`}
+              aria-label={tr(`${index + 1} di ${chapters.length}: ${item.title}`)}
               tabIndex={index === activeIndex ? 0 : -1}
               onFocus={() => activate(index)}
               onClick={() => activate(index)}
               style={{ height: TICKS_PER_CHAPTER * ROW_HEIGHT }}
             >
-              {Array.from({ length: TICKS_PER_CHAPTER }, (_, tick) => (
+              {tr(Array.from({ length: TICKS_PER_CHAPTER }, (_, tick) => (
                 <Tick key={tick} index={index * TICKS_PER_CHAPTER + tick} pointer={pointer} current={index === activeIndex && (tick === 2 || tick === 3)} />
-              ))}
+              )))}
             </button>
           ))}
         </div>
@@ -133,8 +137,8 @@ export function ChapterScrubber({ chapters = [], label = "Le fasi del progetto",
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.div key={chapter.id} initial={{ opacity: 0, y: reduced ? 0 : 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reduced ? 0 : -4 }} transition={{ duration: reduced ? 0 : .16, ease: "easeOut" }}>
-              <h3 className="chapter-scrubber__title">{chapter.title}</h3>
-              <p className="chapter-scrubber__description">{chapter.description}</p>
+              <h3 className="chapter-scrubber__title">{tr(chapter.title)}</h3>
+              <p className="chapter-scrubber__description">{tr(chapter.description)}</p>
             </motion.div>
           </AnimatePresence>
         </motion.div>

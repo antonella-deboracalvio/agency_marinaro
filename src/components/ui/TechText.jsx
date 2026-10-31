@@ -1,9 +1,13 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./TechText.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 // A lightweight, SVG-based interpretation of React Bits' Tech Text.
 // The original heading font is measured, not replaced or stretched.
 export default function TechText({ text, className = "", autoPlay = true }) {
+  const {t:tr}=useTranslation();
+
   const rootRef = useRef(null);
   const [layout, setLayout] = useState(null);
   const [active, setActive] = useState(-1);
@@ -125,14 +129,14 @@ export default function TechText({ text, className = "", autoPlay = true }) {
     <span ref={rootRef} className={`tech-text ${className}`.trim()}
       data-automatic={autoPlay && !reduced} onPointerMove={followPointer}
       onPointerLeave={() => { if (!autoPlay) setActive(-1); }}>
-      <span className="tech-text__accessible">{text}</span>
-      {!layout ? <span className="tech-text__fallback" aria-hidden="true">{text}</span> : (
+      <span className="tech-text__accessible">{tr(text)}</span>
+      {!layout ? <span className="tech-text__fallback" aria-hidden="true">{tr(text)}</span> : (
         <svg className="tech-text__svg" width={layout.width} height={layout.height}
           viewBox={`0 0 ${layout.width} ${layout.height}`} aria-hidden="true" focusable="false">
           {layout.glyphs.map((glyph, index) => (
             <g key={`${index}-${glyph.char}`} className="tech-text__glyph" data-active={active === index}>
-              <text x={glyph.x} y={layout.baseline} fontSize={layout.fontSize} className="tech-text__fill">{glyph.char}</text>
-              <text x={glyph.x} y={layout.baseline} fontSize={layout.fontSize} className="tech-text__outline">{glyph.char}</text>
+              <text x={glyph.x} y={layout.baseline} fontSize={layout.fontSize} className="tech-text__fill">{tr(glyph.char)}</text>
+              <text x={glyph.x} y={layout.baseline} fontSize={layout.fontSize} className="tech-text__outline">{tr(glyph.char)}</text>
             </g>
           ))}
           {box && <g className="tech-text__selection" transform={`translate(${box.x} ${box.y})`}>
@@ -141,7 +145,7 @@ export default function TechText({ text, className = "", autoPlay = true }) {
               <rect className="tech-text__handle" key={index} x={x - 2} y={y - 2} width="4" height="4" />
             ))}
             <text className="tech-text__label" x={labelAtEnd ? box.width : 0} y="-9" textAnchor={labelAtEnd ? "end" : "start"}>
-              {selected.char} · {Math.round(box.width - 6)} × {Math.round(box.height - 6)}
+              {tr(selected.char)} · {tr(Math.round(box.width - 6))} × {tr(Math.round(box.height - 6))}
             </text>
             <rect className="tech-text__speck" x={box.width * .25} y={box.height + 7} width="3" height="3" />
             <rect className="tech-text__speck tech-text__speck--second" x={box.width * .65} y={box.height + 10} width="2" height="2" />

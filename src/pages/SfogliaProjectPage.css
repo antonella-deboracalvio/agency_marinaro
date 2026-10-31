@@ -76,3 +76,7 @@
 .sfoglia-palette li > span:first-child { display: block; height: 32px; border: 1px solid #ffffff12; border-radius: 2px; }
 .sfoglia-story__label { text-transform: uppercase; letter-spacing: .12em; }
 .sfoglia-story > div { align-items: start; }
+
+@media(max-width:767px){.project-detail .service-area__hero .service-area__text-link,.sfoglia-project .service-area__hero .service-area__text-link,.sfoglia-preview-heading{display:none}}
+
+.visual-transparency{color:#b9b1c1;font-size:12px;line-height:1.6;margin:16px 0}

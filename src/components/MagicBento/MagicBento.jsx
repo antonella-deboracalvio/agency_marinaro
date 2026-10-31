@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import "./MagicBento.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 function updateGlow(event) {
   const card = event.currentTarget;
@@ -18,6 +20,8 @@ function dimGlow(event) {
 }
 
 export default function MagicBento({ items }) {
+  const {t:tr}=useTranslation();
+
   return (
     <div className="magic-bento">
       {items.map(({ number, icon: Icon, title, text, layout, image }, index) => (
@@ -37,21 +41,21 @@ export default function MagicBento({ items }) {
         >
           {image && (
             <>
-              <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-40" />
+              <img src={image} alt={tr("")} className="absolute inset-0 h-full w-full object-cover opacity-40" />
               <div className="absolute inset-0 bg-black/60" />
             </>
           )}
 
           <div className="relative z-10 flex items-start justify-between gap-3">
-            <span className="text-[0.64rem] font-semibold uppercase tracking-[0.22em] text-foreground/40 md:text-xs">{number}</span>
+            <span className="text-[0.64rem] font-semibold uppercase tracking-[0.22em] text-foreground/40 md:text-xs">{tr(number)}</span>
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/25 bg-primary/10 text-primary md:h-11 md:w-11">
               <Icon className="h-4 w-4 md:h-5 md:w-5" />
             </span>
           </div>
 
           <div className="relative z-10 mt-auto">
-            <h3 className="text-[1.05rem] font-semibold leading-tight tracking-tight text-foreground md:text-2xl">{title}</h3>
-            <p className="mt-2 text-[0.78rem] leading-5 text-zinc-400 md:mt-3 md:text-sm md:leading-6">{text}</p>
+            <h3 className="text-[1.05rem] font-semibold leading-tight tracking-tight text-foreground md:text-2xl">{tr(title)}</h3>
+            <p className="mt-2 text-[0.78rem] leading-5 text-zinc-400 md:mt-3 md:text-sm md:leading-6">{tr(text)}</p>
           </div>
         </motion.article>
       ))}

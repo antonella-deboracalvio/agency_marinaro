@@ -2,6 +2,8 @@ import malgaTerritorio from '../../assets/work/malga-territorio.webp';
 import malgaCucina from '../../assets/work/malga-cucina.webp';
 import infinityAppartamenti from '../../assets/work/infinity-appartamenti.webp';
 import infinityPrenotazioni from '../../assets/work/infinity-prenotazioni.webp';
+import {useTranslation} from "../../i18n/context.js";
+
 
 export const realProjectSections = {
  'malga-cavedine': [
@@ -14,5 +16,7 @@ export const realProjectSections = {
  ],
 };
 export default function RealProjectShowcase({id,onExpand}) {
- return <div className="real-project-sections">{realProjectSections[id].map((section,i)=><button className="real-project-capture" key={section.src} onClick={()=>onExpand(section.src)} aria-label={`Ingrandisci la sezione ${i+1}`}><img src={section.src} width={section.width} height={section.height} alt={section.alt} loading="lazy" decoding="async"/></button>)}</div>;
+  const {t:tr}=useTranslation();
+
+ return <div className="real-project-sections">{realProjectSections[id].map((section,i)=><button className="real-project-capture" key={section.src} onClick={()=>onExpand(section.src)} aria-label={tr(`Ingrandisci la sezione ${i+1}`)}><img src={section.src} width={section.width} height={section.height} alt={tr(section.alt)} loading="lazy" decoding="async"/></button>)}</div>;
 }

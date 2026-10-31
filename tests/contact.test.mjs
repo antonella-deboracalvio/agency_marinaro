@@ -8,9 +8,9 @@ const valid = {
   services: ["web", "identity", "social"], timing: contactTimings[1],
   message: "Vorrei un sito e un’identità per la mia attività.",
   name: "Cliente Test", email: "cliente@example.com", company: "", phone: "",
-  website: "", requestId: "b672783a-6573-4867-99b2-3671409ad172",
+  privacyNoticeVersion: "test-notice-v1", website: "", requestId: "b672783a-6573-4867-99b2-3671409ad172",
 };
-const env = { RESEND_API_KEY: "test-only", MAIL_FROM: "Studio <studio@example.com>", MAIL_TO: "team@example.com", SITE_URL: "https://studio.example" };
+const env = { PRIVACY_NOTICE_VERSION: "test-notice-v1", RESEND_API_KEY: "test-only", MAIL_FROM: "Studio <studio@example.com>", MAIL_TO: "team@example.com", SITE_URL: "https://studio.example" };
 const request = (data = valid, options = {}) => new Request("https://studio.example/api/contact", {
   method: "POST", headers: { origin: "https://studio.example", "Content-Type": "application/json", ...options.headers },
   body: JSON.stringify(data), ...options,

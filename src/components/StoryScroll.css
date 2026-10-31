@@ -2,15 +2,16 @@
 .story-cross { display: none; }
 
 /* Mobile: the original two compact panels. */
-.story-mobile { position: relative; height: calc(142svh - var(--site-header-height)); }
+.story-mobile { --story-agency-height: clamp(280px, 38svh, 340px); --story-word-gap: 40px; position: relative; height: calc(142svh - var(--site-header-height)); }
 .story-scroll__stage { position: sticky; top: var(--site-header-height); height: calc(100svh - var(--site-header-height)); overflow: hidden; background: var(--primary); }
 .story-scroll__panel { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .story-scroll__panel--creative { background: var(--primary); color: var(--background); }
-.story-scroll__panel--agency { z-index: 2; inset: auto 0 -2px; height: 38svh; min-height: 280px; max-height: 340px; background: var(--background); color: var(--foreground); }
+.story-scroll__panel--agency { z-index: 2; inset: auto 0 -2px; height: var(--story-agency-height); background: var(--background); color: var(--foreground); }
 .story-scroll__intro { position: absolute; z-index: 2; top: 13%; left: 50%; width: 86%; margin: 0; transform: translateX(-50%); font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif; font-size: clamp(2.25rem, 11.5vw, 3.35rem); font-weight: 900; line-height: .87; letter-spacing: -.045em; text-align: center; text-transform: uppercase; }
 .story-scroll__word { position: absolute; white-space: nowrap; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif; font-weight: 900; line-height: .76; letter-spacing: -.055em; text-transform: uppercase; will-change: transform; }
 .story-scroll__word > span { display: inline-block; width: max-content; }
-.story-scroll__creative--large { top: 44%; left: 4%; width: 92%; font-size: clamp(3rem, 20vw, 7rem); text-align: center; }
+/* A full line box lets the animation reserve space for the complete word. */
+.story-scroll__creative--large { top: 44%; left: 4%; width: 92%; font-size: clamp(3rem, 20vw, 7rem); line-height: 1; text-align: center; }
 .story-scroll__agency--large { top: 21%; left: 4%; width: 92%; color: var(--primary); font-size: clamp(3rem, 20vw, 7rem); text-align: center; }
 .story-scroll__agency-note { position: absolute; right: 6%; bottom: 26px; z-index: 3; max-width: 82%; margin: 0; color: var(--muted-foreground); font-family: Georgia, "Times New Roman", serif; font-size: .88rem; font-style: italic; text-align: right; }
 .story-scroll__agency-note::after { content: ""; position: absolute; left: 0; right: -6vw; bottom: -22px; height: 1px; background: rgb(var(--primary-rgb) / .28); }

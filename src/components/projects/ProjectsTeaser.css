@@ -3,9 +3,9 @@
 .projects-teaser__header{--editorial-title-size-mobile:min(30vw,160px)}
 .projects-teaser__header{display:flex;flex-direction:column;align-items:center;padding-bottom:clamp(48px,5vw,72px);text-align:center}
 .projects-teaser__header>p{position:relative;z-index:1;margin:clamp(-8px,-.5vw,-2px) 0 16px;color:var(--foreground);font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.25rem,2.2vw,2.15rem);font-style:italic;font-weight:400;line-height:1;letter-spacing:-.04em}
-.projects-teaser__header-link{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 16px;border:1px solid rgb(var(--primary-rgb) / .3);border-radius:999px;background:var(--secondary);color:var(--foreground);font-family:"Arial Narrow",Arial,sans-serif;font-size:.72rem;font-weight:900;letter-spacing:-.01em;text-decoration:none;text-transform:uppercase;transition:background .25s ease,color .25s ease}
+.projects-teaser__header-link{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 16px;border:1px solid #d6c1e9;border-radius:999px;background:#d6c1e9;color:#241d2c;font-family:"Arial Narrow",Arial,sans-serif;font-size:.72rem;font-weight:900;letter-spacing:-.01em;text-decoration:none;text-transform:uppercase;transition:background .25s ease,color .25s ease,border-color .25s ease}
 .projects-teaser__header h2+.projects-teaser__header-link{margin-top:24px}
-.projects-teaser__header-link:hover{background:var(--primary);color:var(--background)}.projects-teaser__header-link svg{width:14px;height:14px}
+.projects-teaser__header-link:hover{background:#eee3f6;border-color:#eee3f6;color:#241d2c}.projects-teaser__header-link:focus-visible{outline:2px solid #f5f3ef;outline-offset:4px}.projects-teaser__header-link svg{width:14px;height:14px}
 .projects-teaser__list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(52px,6vw,92px) clamp(22px,2.2vw,36px)}
 .projects-teaser__project{display:block;min-width:0;color:var(--foreground);text-decoration:none}
 .projects-teaser__media{width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:15px;background:var(--muted)}
@@ -38,3 +38,5 @@ a.projects-teaser__project:hover .projects-teaser__media img { transform: none !
 .projects-teaser .projects-teaser__media { position: relative; aspect-ratio: 1586 / 992; height: auto; display: grid; place-items: center; background: #171719; }
 .projects-teaser .projects-teaser__media img { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; object-fit: contain; object-position: center; }
 .projects-teaser .projects-teaser__project { grid-template-rows: auto auto; align-self: start; }
+
+.projects-teaser__media{position:relative}.projects-teaser__concept{position:absolute;bottom:14px;left:14px;padding:6px 10px;border-radius:6px;background:#111d;color:#fff;font-size:11px;line-height:1.4;font-weight:400;letter-spacing:0;z-index:2}

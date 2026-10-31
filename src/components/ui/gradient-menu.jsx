@@ -2,10 +2,14 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BadgeEuro, FolderKanban, Home, Layers3, Mail, UsersRound } from "lucide-react";
+import {useTranslation} from "../../i18n/context.js";
+
 
 const icons = { Home, Servizi: Layers3, Progetti: FolderKanban, Team: UsersRound, Prezzi: BadgeEuro, Contatti: Mail };
 
 export default function GradientMenu({ items, isActive }) {
+  const {t:tr}=useTranslation();
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
@@ -32,7 +36,7 @@ export default function GradientMenu({ items, isActive }) {
               />
             )}
             <Icon className={`h-3.5 w-3.5 transition-colors duration-300 ${highlighted ? "text-foreground" : "text-foreground/45"}`} />
-            <span className={`transition-colors duration-300 ${highlighted ? "text-foreground" : "text-foreground/55"}`}>{item.label}</span>
+            <span className={`transition-colors duration-300 ${highlighted ? "text-foreground" : "text-foreground/55"}`}>{tr(item.label)}</span>
           </Link>
         );
       })}

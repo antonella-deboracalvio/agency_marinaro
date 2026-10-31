@@ -2,10 +2,14 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./StoryScroll.css";
+import {useTranslation} from "../i18n/context.js";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function StoryScroll() {
+  const {t:tr}=useTranslation();
+
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -72,6 +76,8 @@ export default function StoryScroll() {
 
       // Fit the longer copy before animating, including after fonts/viewport changes.
       const scene = section.querySelector(".story-mobile");
+      const creative = scene.querySelector(".story-scroll__creative--large");
+      const agencyPanel = scene.querySelector(".story-scroll__panel--agency");
       const words = [...scene.querySelectorAll(".story-scroll__word")];
       const fitMobileWords = () => words.forEach((word) => {
         word.style.removeProperty("font-size");
@@ -90,9 +96,15 @@ export default function StoryScroll() {
       gsap.timeline({
         scrollTrigger: { trigger: scene, start: () => `top ${parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--site-header-height"))}px`, end: "bottom bottom", scrub: 1.4, invalidateOnRefresh: true, onRefreshInit: fitMobileWords },
       })
-        .fromTo(scene.querySelector(".story-scroll__creative--large"), { xPercent: -3 }, { xPercent: 3, ease: "none" }, 0)
+        .fromTo(creative, { xPercent: -3 }, { xPercent: 3, ease: "none" }, 0)
         .to(scene.querySelector(".story-scroll__intro"), { yPercent: -80, opacity: 0, ease: "none" }, 0)
-        .fromTo(scene.querySelector(".story-scroll__panel--agency"), { yPercent: 100 }, { yPercent: 0, ease: "none" }, .44)
+        .fromTo(agencyPanel, { yPercent: 100 }, { yPercent: 0, ease: "none" }, .44)
+        // Keep the complete word above the rising panel. Layout measurements
+        // ignore animation transforms and are recalculated after fonts/resize.
+        .fromTo(creative, { y: 0 }, {
+          y: () => Math.min(0, agencyPanel.offsetTop - creative.offsetTop - creative.offsetHeight - parseFloat(getComputedStyle(scene).getPropertyValue("--story-word-gap"))),
+          ease: "none",
+        }, .44)
         .fromTo(scene.querySelector(".story-scroll__agency--large"), { xPercent: -3 }, { xPercent: 3, ease: "none" }, .44)
         .fromTo(scene.querySelector(".story-scroll__agency-note"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, ease: "none" }, .62);
       return () => words.forEach((word) => word.style.removeProperty("font-size"));
@@ -104,27 +116,27 @@ export default function StoryScroll() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="story-scroll" aria-label="Different by design">
+    <section ref={sectionRef} className="story-scroll" aria-label={tr("Different by design")}>
       <div className="story-cross">
         <div className="story-cross__stage">
-          <p className="story-cross__intro">WE THINK. WE CREATE.</p>
-          <h2 className="story-cross__title" aria-label="DIFFERENT BY DESIGN.">
-            <span className="story-cross__word story-cross__creative" aria-hidden="true">DIFFERENT</span>
-            <span className="story-cross__word story-cross__agency" aria-hidden="true">BY DESIGN.</span>
+          <p className="story-cross__intro">{tr("WE THINK. WE CREATE.")}</p>
+          <h2 className="story-cross__title" aria-label={tr("DIFFERENT BY DESIGN.")}>
+            <span className="story-cross__word story-cross__creative" aria-hidden="true">{tr("DIFFERENT")}</span>
+            <span className="story-cross__word story-cross__agency" aria-hidden="true">{tr("BY DESIGN.")}</span>
           </h2>
-          <p className="story-cross__note">Design, tecnologia e strategia.</p>
+          <p className="story-cross__note">{tr("Design, tecnologia e strategia.")}</p>
         </div>
       </div>
 
       <div className="story-mobile">
         <div className="story-scroll__stage">
           <article className="story-scroll__panel story-scroll__panel--creative">
-            <p className="story-scroll__intro">WE THINK.<br />WE CREATE.</p>
-            <div className="story-scroll__word story-scroll__creative--large"><span>DIFFERENT</span></div>
+            <p className="story-scroll__intro">{tr("WE THINK.")}<br />{tr("WE CREATE.")}</p>
+            <div className="story-scroll__word story-scroll__creative--large"><span>{tr("DIFFERENT")}</span></div>
           </article>
           <article className="story-scroll__panel story-scroll__panel--agency">
-            <div className="story-scroll__word story-scroll__agency--large"><span>BY DESIGN.</span></div>
-            <p className="story-scroll__agency-note">Design, tecnologia e strategia.</p>
+            <div className="story-scroll__word story-scroll__agency--large"><span>{tr("BY DESIGN.")}</span></div>
+            <p className="story-scroll__agency-note">{tr("Design, tecnologia e strategia.")}</p>
           </article>
         </div>
       </div>

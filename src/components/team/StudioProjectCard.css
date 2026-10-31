@@ -27,3 +27,5 @@
 
 .studio-case__campaign { object-fit: contain; object-position: center; }
 .studio-bento > .studio-bento__case-study { background: #171719; }
+
+.studio-case__transparency{position:absolute;left:16px;bottom:16px;max-width:calc(100% - 88px);padding:6px 9px;background:#111c;color:#fff;border-radius:6px;font-size:10px;line-height:1.4}

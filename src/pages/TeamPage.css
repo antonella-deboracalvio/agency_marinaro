@@ -38,3 +38,5 @@
 }
 @media (max-width: 359px) { .team-page__wrap { width: calc(100% - 40px); } }
 @media (prefers-reduced-motion: reduce) { .team-page *, .team-page *::before, .team-page *::after { transition: none; animation: none; } }
+
+.founder-card__portrait img{position:absolute;inset:8% 4% 0;width:92%;height:92%;object-fit:cover;object-position:50% 25%;border-radius:65px;background:#fff}.founder-card--arch .founder-card__portrait img{border-radius:220px 220px 24px 24px}.founder-card__shape{inset:4% 0 0}

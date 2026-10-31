@@ -2,6 +2,7 @@
 const picture = (id, brand, alt, options = {}) => ({
   src: `/images/services/${id}.webp`,
   srcSet: `/images/services/${id}-640.webp 640w, /images/services/${id}-960.webp 960w, /images/services/${id}.webp 1254w`,
+  generated: true,
   brand,
   alt,
   position: "50% 50%",
@@ -11,7 +12,6 @@ const picture = (id, brand, alt, options = {}) => ({
 
 export const serviceArtwork = {
   digital: {
-    gallery: ["d-web", "d-mobile", "d-calendar", "d-dashboard", "d-menu"],
     sections: {
       "siti-web": ["d-web", "d-mobile"],
       prenotazioni: ["d-calendar", "d-booking"],
@@ -20,7 +20,6 @@ export const serviceArtwork = {
     },
   },
   identity: {
-    gallery: ["i-logo", "i-palette", "i-packaging", "i-cards", "i-sign", "i-menu", "i-shopper"],
     sections: {
       logo: ["i-logo", "i-sign"],
       "visual-identity": ["i-palette", "i-pattern"],
@@ -29,7 +28,6 @@ export const serviceArtwork = {
     },
   },
   content: {
-    gallery: ["c-interior", "c-product", "c-talent", "c-posts", "c-stories", "c-hands"],
     sections: {
       "content-shoot": ["c-interior", "c-product"],
       "social-content": ["c-posts", "c-stories"],
@@ -37,11 +35,10 @@ export const serviceArtwork = {
     },
   },
   campaigns: {
-    gallery: ["a-poster", "a-social", "a-tickets", "a-promo", "a-invite-mobile", "a-invite"],
     sections: {
       "event-visuals": ["a-poster", "a-tickets"],
       "promotional-design": ["a-promo", "a-social"],
-      "digital-invitations": ["a-invite", "a-invite-mobile"],
+      "digital-invitations": ["a-invite-mobile"],
     },
   },
 };

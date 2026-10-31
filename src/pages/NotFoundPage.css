@@ -1,0 +1,16 @@
+.not-found{position:relative;isolation:isolate;display:grid;place-items:center;min-height:calc(100svh - 80px);padding:160px 24px 100px;background:#202125;color:#f7f5f0;overflow:hidden}
+.not-found::before{content:'';position:absolute;z-index:-1;inset:0;background-image:linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at center,#000,transparent 75%)}
+.not-found__inner{max-width:850px;text-align:center}
+.not-found__eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#bdb8c7;margin:0 0 14px}
+.not-found__number{position:relative;display:inline-block;font:900 clamp(145px,26vw,300px)/.85 var(--font-display);letter-spacing:-.045em;color:#d1bddf;margin:0 0 32px}
+.not-found__number span{position:absolute;font-size:.25em;right:-.45em;bottom:0;color:#9db6c7}
+.not-found h1{font-size:clamp(24px,3.5vw,38px);font-weight:500;line-height:1.2;letter-spacing:-.045em;margin:0 0 17px}
+.not-found__copy{font-size:14px;line-height:1.8;color:#b9b8bf;margin:0}
+.not-found__links{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:30px}
+.not-found__links a{display:inline-flex;justify-content:center;align-items:center;gap:14px;min-height:48px;border-radius:99px;border:1px solid #ffffff2b;padding:12px 22px;font-size:13px;transition:border-color .2s,background .2s}
+.not-found__links .not-found__home{background:#f5f2eb;color:#25252a;border-color:#f5f2eb}
+.not-found__links a:hover{border-color:#c7b5da;background:#ffffff10}
+.not-found__links .not-found__home:hover{background:#d9cbe6;color:#25252a}
+.not-found__links a:focus-visible{outline:2px solid #c7b5da;outline-offset:5px}
+@media(max-width:600px){.not-found{padding:145px 22px 75px;min-height:88svh}.not-found__copy{font-size:13px}.not-found__copy br{display:none}.not-found__links{flex-direction:column;gap:10px}.not-found__links a{width:100%;max-width:290px}.not-found__number{margin-bottom:30px}}
+@media(prefers-reduced-motion:reduce){.not-found__links a{transition:none}}

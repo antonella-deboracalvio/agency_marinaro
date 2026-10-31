@@ -1,0 +1,14 @@
+.language-flag{display:block;width:24px;height:16px;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1px #ffffff26;flex-shrink:0}
+.language-picker{padding:0 0 22px;border-bottom:1px solid #ffffff18;margin-bottom:18px}
+.language-picker__label{color:#a9a4b1;font:12px/1.5 Inter,system-ui,sans-serif;margin:0 0 10px}
+.language-picker__options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.language-picker__options button{display:flex;align-items:center;justify-content:flex-start;gap:10px;padding:10px 12px;min-height:44px;border:1px solid #ffffff18;border-radius:10px;background:#ffffff05;color:#bdb8c7;font:13px/1.2 Inter,system-ui,sans-serif;cursor:pointer;transition:color .2s,background .2s,border-color .2s}
+.language-picker__options button[aria-pressed="true"]{background:#c1a4f11a;border-color:#c1a4f180;color:#f2e9ff}
+.language-picker__options button:hover{color:#fff;background:#ffffff12}
+.liquid-menu__language-trigger{position:fixed;top:calc((var(--site-header-height) - 44px)/2);right:calc(var(--menu-right) + 60px);display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 13px;border-radius:99px;border:1px solid #ffffff26;background:#222127e8;color:#f5f3ef;font:11px/1.2 Inter,system-ui,sans-serif;letter-spacing:.04em;pointer-events:auto;cursor:pointer}
+.liquid-menu[data-open="true"]>.liquid-menu__language-trigger{visibility:hidden}
+html:not([lang="it"]) .liquid-menu__links a{font-size:clamp(28px,4.5svh,45px);overflow-wrap:anywhere}
+html[lang="de"] .hero-dia{font-size:clamp(2rem,8.5vw,5.2rem)}
+@media(min-width:1024px){.liquid-menu__language-trigger{right:calc(var(--menu-right) + 70px)}}
+@media(max-width:767px){.language-picker{padding-bottom:15px;margin-bottom:14px}.language-picker__options{grid-template-columns:repeat(2,minmax(0,1fr))}.language-picker__options button{padding:9px 10px;font-size:12px}html:not([lang="it"]) .liquid-menu__links a{font-size:clamp(25px,min(9vw,5.5svh),36px)}html[lang="de"] .hero-dia{font-size:clamp(2rem,8.5vw,3rem)}}
+@media(prefers-reduced-motion:reduce){.language-picker__options button{transition:none}}

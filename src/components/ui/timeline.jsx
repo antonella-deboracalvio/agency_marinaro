@@ -3,6 +3,8 @@
 import { Check, Clock, X } from "lucide-react";
 import { cn } from "../../lib/utils";
 import "./timeline.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 const statusLabels = { completed: "Completato", active: "In corso", pending: "Da iniziare", error: "Errore" };
 
@@ -14,12 +16,14 @@ function StatusIcon({ status }) {
 }
 
 function Timestamp({ value }) {
+  const {t:tr}=useTranslation();
+
   if (!value) return null;
   const date = value instanceof Date ? value : new Date(value);
   if (Number.isNaN(date.getTime())) return null;
   return (
     <time className="timeline__timestamp" dateTime={date.toISOString()}>
-      {date.toLocaleDateString("it-IT", { day: "numeric", month: "short", year: "numeric" })}
+      {tr(date.toLocaleDateString("it-IT", { day: "numeric", month: "short", year: "numeric" }))}
     </time>
   );
 }
@@ -36,6 +40,8 @@ export function Timeline({
   timestampPosition = "top",
   ...props
 }) {
+  const {t:tr}=useTranslation();
+
   return (
     <div
       className={cn("timeline", `timeline--${variant}`, `timeline--${orientation}`, className)}
@@ -49,17 +55,17 @@ export function Timeline({
             <li className="timeline__item" key={item.id} data-status={status}>
               {showConnectors && index < items.length - 1 && <span className="timeline__connector" aria-hidden="true" />}
               <span className="timeline__icon" aria-hidden="true">
-                {item.icon ?? <StatusIcon status={status} />}
+                {tr(item.icon ?? <StatusIcon status={status} />)}
               </span>
               <div className="timeline__body">
                 {showTimestamps && timestampPosition === "top" && <Timestamp value={item.timestamp} />}
                 <div className="timeline__heading">
-                  <h3 className="timeline__title">{item.title}</h3>
+                  <h3 className="timeline__title">{tr(item.title)}</h3>
                   {showTimestamps && timestampPosition === "inline" && <Timestamp value={item.timestamp} />}
                 </div>
-                {statusLabels[status] && <span className="sr-only">{statusLabels[status]}</span>}
-                {item.description && <p className="timeline__description">{item.description}</p>}
-                {item.content && <div className="timeline__content">{item.content}</div>}
+                {statusLabels[status] && <span className="sr-only">{tr(statusLabels[status])}</span>}
+                {item.description && <p className="timeline__description">{tr(item.description)}</p>}
+                {item.content && <div className="timeline__content">{tr(item.content)}</div>}
                 {showTimestamps && timestampPosition === "bottom" && <Timestamp value={item.timestamp} />}
               </div>
             </li>

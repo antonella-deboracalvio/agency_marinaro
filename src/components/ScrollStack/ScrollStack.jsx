@@ -1,10 +1,10 @@
 import { useCallback, useLayoutEffect, useRef } from "react";
 import Lenis from "lenis";
 import "./ScrollStack.css";
+import {useTranslation} from "../../i18n/context.js";
 
-export const ScrollStackItem = ({ children, itemClassName = "" }) => (
-  <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
-);
+
+export const ScrollStackItem = ({ children, itemClassName = "" }) => { const {t:tr}=useTranslation(); return (<div className={`scroll-stack-card ${itemClassName}`.trim()}>{tr(children)}</div>); };
 
 export default function ScrollStack({
   children,
@@ -20,6 +20,8 @@ export default function ScrollStack({
   useWindowScroll = false,
   onStackComplete,
 }) {
+  const {t:tr}=useTranslation();
+
   const scrollerRef = useRef(null);
   const stackCompletedRef = useRef(false);
   const animationFrameRef = useRef(null);
@@ -294,7 +296,7 @@ export default function ScrollStack({
   return (
     <div className={`scroll-stack-scroller ${className}`.trim()} ref={scrollerRef}>
       <div className="scroll-stack-inner">
-        {children}
+        {tr(children)}
         <div className="scroll-stack-end" />
       </div>
     </div>

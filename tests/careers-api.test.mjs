@@ -3,8 +3,8 @@ import assert from "node:assert/strict";
 import { createCareersHandler } from "../server/careers-handler.js";
 import { sendApplication } from "../src/lib/send-application.js";
 
-const env = { RESEND_API_KEY: "test-key-never-send", MAIL_FROM: "Studio <site@example.com>", MAIL_TO: "team@example.com", SITE_URL: "https://studio.example.com" };
-const data = { role: "sviluppo", collaboration: "Freelance / a progetto", experience: "1–3 anni", availability: "Da subito", portfolio: "github.com/example", pitch: "Creo siti accessibili con React e curo lo sviluppo delle interfacce.", name: "Persona di prova", email: "candidate@example.org", website: "", requestId: "11111111-2222-4333-8444-555555555555" };
+const env = { PRIVACY_NOTICE_VERSION: "test-notice-v1", RESEND_API_KEY: "test-key-never-send", MAIL_FROM: "Studio <site@example.com>", MAIL_TO: "team@example.com", SITE_URL: "https://studio.example.com" };
+const data = { role: "sviluppo", collaboration: "Freelance / a progetto", experience: "1–3 anni", availability: "Da subito", portfolio: "github.com/example", pitch: "Creo siti accessibili con React e curo lo sviluppo delle interfacce.", name: "Persona di prova", email: "candidate@example.org", privacyNoticeVersion: "test-notice-v1", website: "", requestId: "11111111-2222-4333-8444-555555555555" };
 const request = (body = data, headers = {}, method = "POST") => new Request(`${env.SITE_URL}/api/careers`, { method, headers: { origin: env.SITE_URL, "content-type": "application/json", ...headers }, body: method === "POST" ? typeof body === "string" ? body : JSON.stringify(body) : undefined });
 const sent = () => Response.json({ id: "mock-provider-id" });
 

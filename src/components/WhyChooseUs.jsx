@@ -1,4 +1,6 @@
 import "./WhyChooseUs.css";
+import {useTranslation} from "../i18n/context.js";
+
 
 const principles = [
   {
@@ -24,15 +26,15 @@ const principles = [
 ];
 
 export default function WhyChooseUs() {
+  const {t:tr}=useTranslation();
+
   return (
     <section className="why-section" aria-labelledby="why-title">
       <div className="why-inner">
         <div className="why-header">
-          <p className="why-eyebrow">Perché noi</p>
-          <h2 id="why-title" className="why-title">
-            Design su misura.
-            <br />
-            <span className="why-title__accent">Risultati concreti.</span>
+          <p className="why-eyebrow">{tr("Perché noi")}</p>
+          <h2 id="why-title" className="why-title">{tr("Design su misura.")}<br />
+            <span className="why-title__accent">{tr("Risultati concreti.")}</span>
           </h2>
         </div>
 
@@ -40,9 +42,9 @@ export default function WhyChooseUs() {
           {principles.map(({ label, title, text }) => (
             <article className="why-principle" key={title}>
               <div className="why-principle__content">
-                <p className="why-principle__label">{label}</p>
-                <h3 className="why-principle__title">{title}</h3>
-                <p className="why-principle__text">{text}</p>
+                <p className="why-principle__label">{tr(label)}</p>
+                <h3 className="why-principle__title">{tr(title)}</h3>
+                <p className="why-principle__text">{tr(text)}</p>
               </div>
             </article>
           ))}

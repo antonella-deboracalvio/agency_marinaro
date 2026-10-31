@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import "./TiltedCard.css";
+import {useTranslation} from "../../i18n/context.js";
+
 
 export default function TiltedCard({
   imageSrc,
@@ -17,6 +19,8 @@ export default function TiltedCard({
   displayOverlayContent = false,
   overlayContent = null,
 }) {
+  const {t:tr}=useTranslation();
+
   const cardRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -63,7 +67,7 @@ export default function TiltedCard({
       className="tilted-card"
       style={{ "--tilted-card-height": containerHeight, "--tilted-card-width": containerWidth }}
     >
-      {showMobileWarning && isTouchDevice && <div className="tilted-card-mobile-warning">Tilt disabled on touch devices</div>}
+      {showMobileWarning && isTouchDevice && <div className="tilted-card-mobile-warning">{tr("Tilt disabled on touch devices")}</div>}
 
       <motion.figure
         ref={cardRef}
@@ -81,7 +85,7 @@ export default function TiltedCard({
       >
         <img
           src={imageSrc}
-          alt={altText}
+          alt={tr(altText)}
           className="tilted-card-image"
           style={{ height: imageHeight, width: imageWidth }}
           draggable="false"
@@ -89,9 +93,9 @@ export default function TiltedCard({
 
         <div className="tilted-card-gradient" />
         <div className="tilted-card-glow" />
-        {displayOverlayContent && overlayContent}
+        {tr(displayOverlayContent && overlayContent)}
 
-        {showTooltip && captionText && <figcaption className="tilted-card-caption">{captionText}</figcaption>}
+        {showTooltip && captionText && <figcaption className="tilted-card-caption">{tr(captionText)}</figcaption>}
       </motion.figure>
     </div>
   );
